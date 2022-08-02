@@ -1,0 +1,183 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B68B2DB1-2C6A-43B2-B0CD-FC70859B3036}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Lotofacil</RootNamespace>
+    <AssemblyName>Lotofacil</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <IntelliLockLocation>"C:\Program Files (x86)\Eziriz\IntelliLock\INTELLILOCK.exe"</IntelliLockLocation>
+    <IntelliLockProject>"C:\Users\andvi\OneDrive\Project\C#\IntellLock\Projetos\lotofacil.ilproj"</IntelliLockProject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ControlzEx, Version=3.0.2.4, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ControlzEx.3.0.2.4\lib\net45\ControlzEx.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetZip, Version=1.13.3.0, Culture=neutral, PublicKeyToken=6583c7c814667745, processorArchitecture=MSIL">
+      <HintPath>..\packages\DotNetZip.1.13.3\lib\net40\DotNetZip.dll</HintPath>
+    </Reference>
+    <Reference Include="MahApps.Metro, Version=1.6.5.1, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MahApps.Metro.1.6.5\lib\net46\MahApps.Metro.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\Debug\teste\Report View\MeusProjetos\cap02\cap02\bin\Debug\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\ControlzEx.3.0.2.4\lib\net45\System.Windows.Interactivity.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Concursos.cs" />
+    <Compile Include="GerarJogos.cs" />
+    <Compile Include="JogosGerados.cs" />
+    <Compile Include="Util\BaixaBaseDados.cs" />
+    <Compile Include="Util\bolas.cs" />
+    <Compile Include="Estatisticas\Estatiscas.cs" />
+    <Compile Include="Read\ExtrairZip.cs" />
+    <Compile Include="Util\JogoPossivel.cs" />
+    <Compile Include="Util\PathData.cs" />
+    <Compile Include="Read\ReadData.cs" />
+    <Compile Include="Util\Result.cs" />
+    <Compile Include="Util\Util.cs" />
+    <Compile Include="Validacoes.cs" />
+    <Compile Include="ViewModel.cs" />
+    <Compile Include="Volantes.xaml.cs">
+      <DependentUpon>Volantes.xaml</DependentUpon>
+    </Compile>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Command.cs" />
+    <Compile Include="JogarLotofacil.cs" />
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Volantes.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="app.manifest" />
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\App.datasource" />
+    <None Include="Properties\DataSources\BaixaBaseDados.datasource" />
+    <None Include="Properties\DataSources\Bolas.datasource" />
+    <None Include="Properties\DataSources\Command.datasource" />
+    <None Include="Properties\DataSources\Concursos.datasource" />
+    <None Include="Properties\DataSources\Estatiscas.datasource" />
+    <None Include="Properties\DataSources\ExtrairZip.datasource" />
+    <None Include="Properties\DataSources\GerarJogos.datasource" />
+    <None Include="Properties\DataSources\JogarLotofacil.datasource" />
+    <None Include="Properties\DataSources\JogoPossivel.datasource" />
+    <None Include="Properties\DataSources\JogosGerados.datasource" />
+    <None Include="Properties\DataSources\Lotofacil.Properties.Resources.datasource" />
+    <None Include="Properties\DataSources\Lotofacil.Properties.Settings.datasource" />
+    <None Include="Properties\DataSources\MainWindow.datasource" />
+    <None Include="Properties\DataSources\PathData.datasource" />
+    <None Include="Properties\DataSources\ReadData.datasource" />
+    <None Include="Properties\DataSources\Result.datasource" />
+    <None Include="Properties\DataSources\Util.datasource" />
+    <None Include="Properties\DataSources\Validacoes.datasource" />
+    <None Include="Properties\DataSources\ViewModel.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <EmbeddedResource Include="Relatorios\Frequencia.rdlc" />
+    <EmbeddedResource Include="Relatorios\Jogos.rdlc" />
+    <EmbeddedResource Include="Relatorios\Jogos_Lista.rdlc" />
+    <EmbeddedResource Include="Relatorios\Volantes.rdlc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\lotofacil.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties IntelliLock_Enabled="0" IntelliLock_Deployment="1" IntelliLock_Settings="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" IntelliLock_Output="[output_dir]Lotofacil_Locked\Lotofacil.exe" IntelliLock_ProjectFile="C:\Users\andvi\OneDrive\Project\C#\IntellLock\Projetos\lotofacil.ilproj" IntelliLock_Configuration="Debug" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

@@ -1,0 +1,697 @@
+﻿<Controls:MetroWindow x:Class="Lotofacil.MainWindow" WindowStartupLocation="CenterScreen" WindowState="Maximized"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:rv="clr-namespace:Microsoft.Reporting.WinForms;assembly=Microsoft.ReportViewer.WinForms"
+        xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
+        xmlns:local="clr-namespace:Lotofacil"
+        xmlns:Controls="http://metro.mahapps.com/winfx/xaml/controls"
+        mc:Ignorable="d"
+        Title="LOTERIA" Height="835.6" Width="1500"
+        BorderBrush="{DynamicResource AccentColorBrush}"
+        BorderThickness="1" KeyDown="HotKey_KeyDown" StateChanged="MetroWindow_StateChanged">
+
+    <Controls:MetroWindow.Flyouts>
+        <Controls:FlyoutsControl x:Name="controleFloyouts">
+            <Controls:Flyout x:Name="FlyoutJogar"
+                             Header="Regras"
+                             Position="Left"
+                             IsPinned="True"
+                             IsOpen="False"
+                             AnimateOnPositionChange="True"
+                             AnimateOpacity="True"
+                             Theme="Light"
+                             ExternalCloseButton="Left"
+                             CloseButtonIsCancel="True"
+                             CloseButtonVisibility="Visible"
+                             HorizontalContentAlignment="Center"
+                             TitleVisibility="Visible"
+                             AreAnimationsEnabled="True"
+                             Width="400" ForceCursor="True"
+                             Controls:ControlsHelper.ContentCharacterCasing="Upper"
+                             Controls:ControlsHelper.HeaderFontSize="30" ClosingFinished="FlyoutJogar_ClosingFinished"
+                             >
+                <Grid x:Name="grdJogar_1" Margin="5">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="15"></RowDefinition>
+                        <RowDefinition Height="15"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                        <RowDefinition Height="15"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                        <RowDefinition Height="15"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                        <RowDefinition Height="15"></RowDefinition>
+                        <RowDefinition Height="6*"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <TextBlock Foreground="Red" Grid.Row="0" TextAlignment="Left" VerticalAlignment="Center">CAMPOS OBRIGATÓRIOS</TextBlock>
+                    <TextBlock Grid.Row="1" Background="AliceBlue" TextAlignment="Center" VerticalAlignment="Center">QTD DE DEZENAS</TextBlock>
+                    <ComboBox  Grid.Row="2" x:Name="lsBoxQntdDezenas" HorizontalContentAlignment="Center" HorizontalAlignment="Center" MinWidth="300" Height="30"  Controls:TextBoxHelper.Watermark="Selecione uma opção" SelectedValue="{Binding Regras.ModoJogo}" FontFamily="Sitka Display"/>
+                    <TextBlock Grid.Row="3" Background="AliceBlue" Controls:TextBoxHelper.Watermark="Qntd de apostas" TextAlignment="Center" VerticalAlignment="Center">Nº DE JOGOS</TextBlock>
+                    <TextBox Grid.Row="4" HorizontalAlignment="Center" MinWidth="300" x:Name="txtBoxNumJogos" Text="{Binding Regras.QntdJogos, Mode=TwoWay}" TextAlignment="Center" VerticalAlignment="Center" FontFamily="Sitka Display"></TextBox>
+                    <TextBlock Grid.Row="5" Background="AliceBlue" Controls:TextBoxHelper.Watermark="Selecione um Padrão" TextAlignment="Center" VerticalAlignment="Center">PADRÃO</TextBlock>
+                    <ListBox Grid.Row="6" HorizontalAlignment="Center" HorizontalContentAlignment="Center" MinWidth="300" x:Name="lstBoxPadroes" Height="30" VerticalAlignment="Center" SelectedValue="{Binding Regras.Padrao, Mode=TwoWay}" FontFamily="Sitka Display"/>
+
+                    <TextBlock Grid.Row="7" TextAlignment="Left" VerticalAlignment="Center" Foreground="Blue">CAMPOS OPCIONAIS</TextBlock>
+
+                    <Grid Grid.Row="8">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="15"></RowDefinition>
+                            <RowDefinition Height="30"></RowDefinition>
+                            <RowDefinition Height="15"></RowDefinition>
+                            <RowDefinition Height="60"></RowDefinition>
+                            <RowDefinition Height="15"></RowDefinition>
+                            <RowDefinition Height="50"></RowDefinition>
+                            <RowDefinition Height="50"></RowDefinition>
+                            <RowDefinition Height="15"></RowDefinition>
+                            <RowDefinition Height="50"></RowDefinition>
+                        </Grid.RowDefinitions>
+
+                        <TextBlock TextAlignment="Center" Background="AliceBlue" Grid.Row="0" VerticalAlignment="Center" TextWrapping="Wrap">DEZENAS EM SEQUÊNCIA</TextBlock>
+                        <ListBox Grid.Row="1" MaxWidth="300" HorizontalContentAlignment="Center" MaxHeight="30" x:Name="lstBoxSequenciaDezenas" SelectedValue="{Binding Regras.SeqDezenas, Mode=TwoWay}" FontFamily="Sitka Display"/>
+                        <TextBlock Background="AliceBlue" Grid.Row="2" VerticalAlignment="Center" TextAlignment="Center">Nº PRIMOS</TextBlock>
+
+                        <DockPanel VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="3">
+                            <TextBlock VerticalAlignment="Center" TextAlignment="Center" TextWrapping="Wrap">MIN</TextBlock>
+                            <TextBox x:Name="txtBoxPrimosMin" MinWidth="50" Margin="5,0,0,0" Text="{Binding Regras.PrimosMin, Mode=TwoWay}" TextAlignment="Center"></TextBox>
+                            <TextBlock VerticalAlignment="Center" TextWrapping="Wrap" Foreground="Red" FontSize="10" TextAlignment="Left" Margin="5,0,0,0">Nº entre 3 a 6</TextBlock>
+                            <TextBlock Margin="50,0,0,0" VerticalAlignment="Center" TextAlignment="Center">MAX</TextBlock>
+                            <TextBox x:Name="txtBoxPrimosMax"  Margin="5,0,0,0" MinWidth="50" Text="{Binding Regras.PrimosMax, Mode=TwoWay}" TextAlignment="Center"></TextBox>
+                            <TextBlock Margin="5,0,0,0"  TextWrapping="Wrap" Foreground="Red" FontSize="10" VerticalAlignment="Center" TextAlignment="Left">Nº entre 4 a 7</TextBlock>
+                        </DockPanel>
+                        <TextBlock Background="AliceBlue" Grid.Row="4" TextAlignment="Center" VerticalAlignment="Center">OBRIGATÓRIOS</TextBlock>
+
+                        <DockPanel Margin="5" Grid.Row="5" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <TextBox x:Name="txtBoxObrigatorio_1" Text="{Binding Regras.Obrigatorio_1, Mode=TwoWay}" MinWidth="30" TextAlignment="Center"></TextBox>
+                            <TextBox x:Name="txtBoxObrigatorio_2" Text="{Binding Regras.Obrigatorio_2, Mode=TwoWay}" MinWidth="30" Margin="5,0,0,0" TextAlignment="Center"></TextBox>
+                            <TextBox x:Name="txtBoxObrigatorio_3" Text="{Binding Regras.Obrigatorio_3, Mode=TwoWay}" MinWidth="30" Margin="5,0,0,0" TextAlignment="Center"></TextBox>
+                            <TextBox x:Name="txtBoxObrigatorio_4" Text="{Binding Regras.Obrigatorio_4, Mode=TwoWay}" MinWidth="30" Margin="5,0,0,0" TextAlignment="Center"></TextBox>
+                            <TextBox x:Name="txtBoxObrigatorio_5" Text="{Binding Regras.Obrigatorio_5, Mode=TwoWay}" MinWidth="30" Margin="5,0,0,0" TextAlignment="Center"></TextBox>
+                            <TextBox x:Name="txtBoxObrigatorio_6" Text="{Binding Regras.Obrigatorio_6, Mode=TwoWay}" MinWidth="30" Margin="5,0,0,0" TextAlignment="Center"></TextBox>
+                            <TextBox x:Name="txtBoxObrigatorio_7" Text="{Binding Regras.Obrigatorio_7, Mode=TwoWay}" MinWidth="30" Margin="5,0,0,0" TextAlignment="Center"></TextBox>
+                            <TextBox x:Name="txtBoxObrigatorio_8" Text="{Binding Regras.Obrigatorio_8, Mode=TwoWay}" MinWidth="30" Margin="5,0,0,0" TextAlignment="Center"></TextBox>
+                            <TextBox x:Name="txtBoxObrigatorio_9" Text="{Binding Regras.Obrigatorio_9, Mode=TwoWay}" MinWidth="30" Margin="5,0,0,0" TextAlignment="Center"></TextBox>
+                            <TextBox x:Name="txtBoxObrigatorio_10" Text="{Binding Regras.Obrigatorio_10, Mode=TwoWay}" MinWidth="30" Margin="5,0,0,0" TextAlignment="Center"></TextBox>
+                        </DockPanel>
+
+
+                        <Button Margin="0,5,0,10" Grid.Row="6" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" Background="{DynamicResource AccentColorBrush}" Command="{Binding Path=Swap}" ToolTip="Inverter">
+                            <iconPacks:PackIconFontAwesome Foreground="Black" Kind="RetweetSolid"></iconPacks:PackIconFontAwesome>
+                        </Button>
+
+                        <TextBlock Background="AliceBlue" Grid.Row="7" TextAlignment="Center" VerticalAlignment="Center">DESCARTAVEIS</TextBlock>
+
+                        <DockPanel Margin="5" Grid.Row="8" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <TextBox x:Name="txtBoxDescartavel_1" Text="{Binding Regras.Descartavel_1, Mode=TwoWay}" MinWidth="30" TextAlignment="Center"></TextBox>
+                            <TextBox x:Name="txtBoxDescartavel_2" Text="{Binding Regras.Descartavel_2, Mode=TwoWay}" MinWidth="30" Margin="5,0,0,0" TextAlignment="Center"></TextBox>
+                            <TextBox x:Name="txtBoxDescartavel_3" Text="{Binding Regras.Descartavel_3, Mode=TwoWay}" MinWidth="30" Margin="5,0,0,0" TextAlignment="Center"></TextBox>
+                            <TextBox x:Name="txtBoxDescartavel_4" Text="{Binding Regras.Descartavel_4, Mode=TwoWay}" MinWidth="30" Margin="5,0,0,0" TextAlignment="Center"></TextBox>
+                            <TextBox x:Name="txtBoxDescartavel_5" Text="{Binding Regras.Descartavel_5, Mode=TwoWay}" MinWidth="30" Margin="5,0,0,0" TextAlignment="Center"></TextBox>
+                            <TextBox x:Name="txtBoxDescartavel_6" Text="{Binding Regras.Descartavel_6, Mode=TwoWay}" MinWidth="30" Margin="5,0,0,0" TextAlignment="Center"></TextBox>
+                            <TextBox x:Name="txtBoxDescartavel_7" Text="{Binding Regras.Descartavel_7, Mode=TwoWay}" MinWidth="30" Margin="5,0,0,0" TextAlignment="Center"></TextBox>
+                            <TextBox x:Name="txtBoxDescartavel_8" Text="{Binding Regras.Descartavel_8, Mode=TwoWay}" MinWidth="30" Margin="5,0,0,0" TextAlignment="Center"></TextBox>
+                            <TextBox x:Name="txtBoxDescartavel_9" Text="{Binding Regras.Descartavel_9, Mode=TwoWay}" MinWidth="30" Margin="5,0,0,0" TextAlignment="Center"></TextBox>
+                            <TextBox x:Name="txtBoxDescartavel_10" Text="{Binding Regras.Descartavel_10, Mode=TwoWay}" MinWidth="30" Margin="5,0,0,0" TextAlignment="Center"></TextBox>
+                        </DockPanel>
+
+                    </Grid>
+
+                    <DockPanel Grid.Row="9" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <Button x:Name="btnLimpar"  Command="{Binding Path=Clear}" Background="#FF989C9C" Foreground="#FFF2E3F2">LIMPAR</Button>
+                        <Button x:Name="btnGerar" Click="BtnGerar_Click"  Margin="5,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Center" Command="{Binding Path=GerarJogos}" Background="#FF0C904F" Foreground="#FFF4EAEA">GERAR</Button>
+                    </DockPanel>
+
+                </Grid>
+
+            </Controls:Flyout>
+
+            <Controls:Flyout x:Name="FlyoutSaida"
+                             ClosingFinished="FlyoutSaida_ClosingFinished"
+                             Header="Saída de Dados"
+                             Position="Right"
+                             IsPinned="False"
+                             IsOpen="False"
+                             AnimateOnPositionChange="True"
+                             AnimateOpacity="True"
+                             Theme="Light"
+                             ExternalCloseButton="Left"
+                             CloseButtonIsCancel="True"
+                             CloseButtonVisibility="Visible"
+                             HorizontalContentAlignment="Center"
+                             TitleVisibility="Visible"
+                             AreAnimationsEnabled="True"
+                             Width="310" ForceCursor="True"
+                             Controls:ControlsHelper.ContentCharacterCasing="Upper"
+                             Controls:ControlsHelper.HeaderFontSize="30"
+                             >
+
+                <Grid x:Name="grdSaida" Margin="10">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="0.5*"></RowDefinition>
+                        <RowDefinition Height="0.5*"></RowDefinition>
+                        <RowDefinition Height="8*"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <DockPanel Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Left">
+                        <Button Foreground="White" Background="{DynamicResource AccentColorBrush}" Command="{Binding Path=Export}" ToolTip="Salvar jogos">
+                            <iconPacks:PackIconFontAwesome Foreground="Black" Kind="SaveSolid"></iconPacks:PackIconFontAwesome>
+                        </Button>
+
+                        <Button Foreground="White" Margin="5,0,0,0" Background="{DynamicResource AccentColorBrush}" Command="{Binding Path=GerarVolantes}" ToolTip="Imprimir todos os volantes jogos">
+                            <iconPacks:PackIconFontAwesome Foreground="Black" Kind="PrintSolid" ></iconPacks:PackIconFontAwesome>
+                        </Button>
+
+                    </DockPanel>
+
+                    <DockPanel Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Right">
+                        <Button Foreground="White" Background="{DynamicResource AccentColorBrush}" Command="{Binding Path=ClearJogos}">
+                            <iconPacks:PackIconFontAwesome Foreground="Black" Kind="BackspaceSolid"></iconPacks:PackIconFontAwesome>
+                        </Button>
+                    </DockPanel>
+
+                    <ListBox x:Name="lsJogos" Grid.Row="2" ItemsSource="{Binding Path=Regras.Jogos}">
+                        <ListBox.ItemTemplate>
+                            <DataTemplate >
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="{Binding }"></TextBlock>
+                                </StackPanel>
+
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                </Grid>
+            </Controls:Flyout>
+        </Controls:FlyoutsControl>
+    </Controls:MetroWindow.Flyouts>
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="30"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="30"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Button x:Name="arrowJogar" BorderThickness="0" Click="ArrowJogar_Click" Cursor="Hand" HorizontalAlignment="Stretch" Padding="0" VerticalAlignment="Stretch" BorderBrush="#FFFAFAFC">
+            <Button.Background>
+                <ImageBrush Stretch="None"/>
+            </Button.Background>
+            <iconPacks:PackIconFontAwesome Kind="ArrowRightSolid" Foreground="{DynamicResource AccentColorBrush}"  Height="50" Width="25"></iconPacks:PackIconFontAwesome>
+        </Button>
+
+        <Button Grid.Column="2" x:Name="arrowSaida" BorderThickness="0" Click="ArrowSaida_Click" Cursor="Hand" HorizontalAlignment="Stretch" Padding="0" VerticalAlignment="Stretch" BorderBrush="#FFFAFAFC">
+            <Button.Background>
+                <ImageBrush Stretch="None"/>
+            </Button.Background>
+            <iconPacks:PackIconFontAwesome Kind="ArrowLeftSolid" Foreground="{DynamicResource AccentColorBrush}"  Height="50" Width="25"></iconPacks:PackIconFontAwesome>
+        </Button>
+
+
+        <Grid Grid.Column="1">
+            <Controls:MetroTabControl KeyDown="HotKey_KeyDown">
+                <Controls:MetroTabItem Header="Fechamento">
+                    <Grid KeyDown="HotKey_KeyDown">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Grid Grid.Column="0" Margin="0,15,10,0" KeyDown="HotKey_KeyDown">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="60"></RowDefinition>
+                                <RowDefinition Height="30"></RowDefinition>
+                                <RowDefinition Height="60"></RowDefinition>
+                                <RowDefinition Height="30"></RowDefinition>
+                                <RowDefinition Height="60"></RowDefinition>
+                                <RowDefinition Height="30"></RowDefinition>
+                                <RowDefinition Height="60"></RowDefinition>
+                                <RowDefinition Height="30"></RowDefinition>
+                                <RowDefinition Height="60"></RowDefinition>
+                                <RowDefinition Height="60"></RowDefinition>
+                                <RowDefinition Height="40"></RowDefinition>
+                                <RowDefinition Height="30"></RowDefinition>
+                                <RowDefinition Height="*"></RowDefinition>
+                            </Grid.RowDefinitions>
+
+
+                            <Grid Grid.Row="0" Margin="10 0 0 0"  KeyDown="HotKey_KeyDown">
+                                <TextBlock Text="Configurações" FontSize="25" TextAlignment="Left" Foreground="{DynamicResource AccentColorBrush}" VerticalAlignment="Center"></TextBlock>
+                            </Grid>
+
+                            <Grid Grid.Row="1"  KeyDown="HotKey_KeyDown">
+                                <TextBlock Background="AliceBlue" Text="Total de Dezenas" FontSize="20" TextAlignment="Center" Foreground="{DynamicResource AccentColorBrush}" VerticalAlignment="Center"></TextBlock>
+                            </Grid>
+
+                            <Grid Grid.Row="2"  KeyDown="HotKey_KeyDown">
+                                <TextBox TextAlignment="Center"
+                                         Text="{Binding Fechamento.Total_Dezenas, Mode=TwoWay}"
+                                         HorizontalAlignment="Stretch" HorizontalContentAlignment="Center"
+                                         VerticalAlignment="Center"
+                                         Controls:TextBoxHelper.Watermark="Números total de dezenas"
+                                         Controls:TextBoxHelper.UseFloatingWatermark="True"
+                                         ></TextBox>
+                            </Grid>
+
+                            <Grid Grid.Row="3" KeyDown="HotKey_KeyDown">
+                                <TextBlock Background="AliceBlue" Text="Volantes" FontSize="20" TextAlignment="Center" Foreground="{DynamicResource AccentColorBrush}" VerticalAlignment="Center"></TextBlock>
+                            </Grid>
+
+                            <Grid Grid.Row="4"  KeyDown="HotKey_KeyDown">
+                                <TextBox TextAlignment="Center"
+                                         Text="{Binding Fechamento.Volante, Mode=TwoWay}"
+                                         HorizontalAlignment="Stretch" HorizontalContentAlignment="Center"
+                                         VerticalAlignment="Center"
+                                         Controls:TextBoxHelper.Watermark="Total de dezenas para cada Volante"
+                                         Controls:TextBoxHelper.UseFloatingWatermark="True"
+                                         ></TextBox>
+                            </Grid>
+
+                            <Grid Grid.Row="5" KeyDown="HotKey_KeyDown">
+                                <TextBlock Background="AliceBlue" Text="Garantia" FontSize="20" TextAlignment="Center" Foreground="{DynamicResource AccentColorBrush}" VerticalAlignment="Center"></TextBlock>
+                            </Grid>
+
+                            <Grid Grid.Row="6"  KeyDown="HotKey_KeyDown">
+                                <TextBox TextAlignment="Center"
+                                         HorizontalAlignment="Stretch" HorizontalContentAlignment="Center"
+                                         VerticalAlignment="Center"
+                                         Text="{Binding Fechamento.Garantia, Mode=TwoWay}"
+                                         Controls:TextBoxHelper.Watermark="Defina uma garantia, caso acerte 100% a condição"
+                                         Controls:TextBoxHelper.UseFloatingWatermark="True"
+                                         ></TextBox>
+                            </Grid>
+
+                            <Grid Grid.Row="7" KeyDown="HotKey_KeyDown">
+                                <TextBlock Background="AliceBlue" Text="Condição" FontSize="20" TextAlignment="Center" Foreground="{DynamicResource AccentColorBrush}" VerticalAlignment="Center"></TextBlock>
+                            </Grid>
+
+                            <Grid Grid.Row="8"  KeyDown="HotKey_KeyDown">
+                                <TextBox TextAlignment="Center"
+                                         Text="{Binding Fechamento.Condicao, Mode=TwoWay}"
+                                         HorizontalAlignment="Stretch" HorizontalContentAlignment="Center"
+                                         VerticalAlignment="Center"
+                                         Controls:TextBoxHelper.Watermark="Quantidade de acertos sobre as dezenas"
+                                         Controls:TextBoxHelper.UseFloatingWatermark="True"
+                                         ></TextBox>
+                            </Grid>
+
+
+                            <Grid Grid.Row="9" Margin="10 0 0 0"  KeyDown="HotKey_KeyDown">
+                                <TextBlock Text="Informativo" FontSize="25" TextAlignment="Left" Foreground="{DynamicResource AccentColorBrush}" VerticalAlignment="Center"></TextBlock>
+                            </Grid>
+
+                            <Grid Grid.Row="10"  KeyDown="HotKey_KeyDown">
+                                <TextBlock FontSize="15" TextWrapping="Wrap" TextAlignment="Center" VerticalAlignment="Center" Text="{Binding Fechamento.Informativo, Mode=TwoWay}"></TextBlock>
+                            </Grid>
+
+                        </Grid>
+                        
+                        
+                        <Grid Grid.Column="1" Margin="5,15,10,0" KeyDown="HotKey_KeyDown">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="60"></RowDefinition>
+                                <RowDefinition Height="90"></RowDefinition>
+                                <RowDefinition Height="60"></RowDefinition>
+                                <RowDefinition Height="60"></RowDefinition>
+                                <RowDefinition Height="90"></RowDefinition>
+                            </Grid.RowDefinitions>
+
+                            <Grid Grid.Row="0"  KeyDown="HotKey_KeyDown">
+                                <TextBlock Text="Definição de Dezenas" FontSize="25" TextAlignment="Left" Foreground="{DynamicResource AccentColorBrush}" VerticalAlignment="Center"></TextBlock>
+                            </Grid>
+
+                            <Grid Grid.Row="1" Margin="0 0 0 0"  KeyDown="HotKey_KeyDown">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"></ColumnDefinition>
+                                    <ColumnDefinition></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="30"></RowDefinition>
+                                    <RowDefinition></RowDefinition>
+                                </Grid.RowDefinitions>
+
+                                <TextBlock Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Right">Copiar Saída de Dados</TextBlock>
+
+                                <Button Grid.Column="1" Command="{Binding CopiaJogoResultParaFechamento}" Margin="5 0 0 0" Background="{DynamicResource AccentColorBrush}" VerticalAlignment="Center" HorizontalAlignment="Left">
+                                    <iconPacks:PackIconFontAwesome  Foreground="Black" Kind="PasteSolid" ></iconPacks:PackIconFontAwesome>
+                                </Button>
+
+                                <TextBox Grid.Column="0"  Grid.ColumnSpan="2" Grid.Row="2" TextAlignment="Center"
+                                         Text="{Binding Fechamento.Dezenas, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged, NotifyOnValidationError=True, Mode=TwoWay}"
+                                         HorizontalAlignment="Stretch" HorizontalContentAlignment="Center"
+                                         VerticalAlignment="Center"
+                                         Controls:TextBoxHelper.Watermark="Insira as dezenas, separando-as com espaços"
+                                         Controls:TextBoxHelper.UseFloatingWatermark="True"
+                                         Controls:TextBoxHelper.ClearTextButton="True"
+                                         ></TextBox>
+                            </Grid>
+
+                            <Grid Grid.Row="2">
+                                    <TextBlock Text="Desdobrar" FontSize="25" TextAlignment="Left" Foreground="{DynamicResource AccentColorBrush}" VerticalAlignment="Center"></TextBlock>
+                            </Grid>
+
+                            <Grid Grid.Row="3">
+                                <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+                                    <TextBlock>Incrementar um jogo extra com as primeiras 15 dezenas definidas</TextBlock>
+
+                                    <Controls:ToggleSwitch  Margin="0 10 0 0" Style="{StaticResource MahApps.Metro.Styles.ToggleSwitch.Win10}"
+                                    OnLabel="Sim"
+                                    IsEnabled="{Binding Fechamento.Ativa_ToggleSwitch}"
+                                    IsChecked="{Binding Fechamento.Considerar_15_Primeiras}"
+                                    HorizontalAlignment="Center"
+                                    OffLabel="Não"
+                                    OffSwitchBrush="Red" OnSwitchBrush="Green"/>
+                                </StackPanel>
+
+                            </Grid>
+
+                            <Button Grid.Row="4" Click="btnFechamento_Click" MinHeight="40" VerticalAlignment="Bottom" HorizontalAlignment="Center" Command="{Binding ExecutaFechamento}" Background="#FF0C904F" Foreground="#FFF4EAEA">INICIAR</Button>
+
+                            
+                            
+                        </Grid>
+                    </Grid>
+                </Controls:MetroTabItem>
+
+                <Controls:MetroTabItem Header="Análise" KeyDown="HotKey_KeyDown" >
+                    <Grid KeyDown="HotKey_KeyDown">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="5*"></ColumnDefinition>
+                            <ColumnDefinition Width="5*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <StackPanel KeyDown="HotKey_KeyDown"  Margin="5 10 5 0" Grid.Column="0">
+                            <Expander  Cursor="Hand" KeyDown="HotKey_KeyDown" x:Name="exBaseDados"  Header="Base de Dados">
+                                <Grid>
+                                    <Button x:Name="btnAtualizarDataBase" Background="{DynamicResource AccentColorBrush}" VerticalAlignment="Center" HorizontalAlignment="Center" Command="{Binding Path=AtualizarDatabase}" ToolTip="Atualizar os Jogos" Click="BtnAtualizarDataBase_Click">Atualizar</Button>
+                                </Grid>
+                            </Expander>
+
+                            <Expander Cursor="Hand" KeyDown="HotKey_KeyDown" x:Name="exConcursos" Margin="0,10,0,0" Header="CONCURSOS">
+                                <Grid Height="400">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*"></RowDefinition>
+                                        <RowDefinition Height="4*"></RowDefinition>
+                                    </Grid.RowDefinitions>
+
+                                    <Grid Grid.Row="0">
+                                        <StackPanel HorizontalAlignment="Center">
+                                            <DockPanel Margin="0,5,0,15">
+                                                <CheckBox Background="{DynamicResource AccentColorBrush}" x:Name="checkBoxListarResults">Exibir em Lista detalhada</CheckBox>
+                                                <TextBox x:Name="txtFiltroJogos" MinWidth="80" ToolTip="Exibi os últimos n jogos"  Margin="20,0,0,0" Text="20" Controls:TextBoxHelper.Watermark="Filtrar Jogos" HorizontalContentAlignment="Center"/>
+                                                <Button x:Name="btnFiltroJogos" HorizontalAlignment="Left" Margin="10,0,0,0" Click="BtnFiltroJogos_Click" Background="{DynamicResource AccentColorBrush}">Filtrar</Button>
+                                            </DockPanel>
+
+                                        </StackPanel>
+
+                                    </Grid>
+
+                                    <Grid Grid.Row="1">
+                                        <WindowsFormsHost x:Name="PainelJogos" Visibility="Collapsed" UseLayoutRounding="True">
+                                            <rv:ReportViewer x:Name="ReportViewer" PageCountMode="Actual"/>
+                                        </WindowsFormsHost>
+                                    </Grid>
+
+                                </Grid>
+                            </Expander>
+
+                        </StackPanel>
+
+                        <ScrollViewer  KeyDown="HotKey_KeyDown" Grid.Column="1" Controls:ScrollViewerHelper.IsHorizontalScrollWheelEnabled="True" PanningDeceleration="18" OverridesDefaultStyle="True" Controls:ScrollBarHelper.VerticalScrollBarOnLeftSide="True">
+                            <StackPanel KeyDown="HotKey_KeyDown" Margin="5 10 5 0" >
+                                <Expander KeyDown="HotKey_KeyDown" x:Name="exFrequencia" Header="Frequência de todas as Dezenas"  Cursor="Hand">
+                                    <Grid KeyDown="HotKey_KeyDown">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="210"></RowDefinition>
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="8*"></ColumnDefinition>
+                                            <ColumnDefinition Width="2*"></ColumnDefinition>
+                                        </Grid.ColumnDefinitions>
+                                        <DockPanel Grid.Column="0">
+                                            <WindowsFormsHost x:Name="wfhFrenquencia" Visibility="Collapsed" >
+                                                <rv:ReportViewer ShowToolBar="True" x:Name="ReportViewerFrequencia" />
+                                            </WindowsFormsHost>
+                                        </DockPanel>
+                                        <DockPanel HorizontalAlignment="Center" LastChildFill="False" Grid.Column="1">
+                                            <DockPanel DockPanel.Dock="Top">
+                                                <TextBox x:Name="txtFiltroFr" MinWidth="50" MaxWidth="50" ToolTip="Frequência dos últimos jogos" Text="20" Controls:TextBoxHelper.Watermark="Filtrar Freq." HorizontalContentAlignment="Center"/>
+                                                <Button x:Name="btnFiltroFr" Background="{DynamicResource AccentColorBrush}" Margin="5,0,0,0" Click="BtnFiltroFr_Click">Filtrar</Button>
+
+                                            </DockPanel>
+                                        </DockPanel>
+                                    </Grid>
+                                </Expander>
+                                <Expander KeyDown="HotKey_KeyDown" x:Name="exParesImpares" Margin="0,10,0,0" Header="Padrão - Pares e Ímpares" Cursor="Hand">
+                                    <Grid KeyDown="HotKey_KeyDown">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="280"></RowDefinition>
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="8*"></ColumnDefinition>
+                                            <ColumnDefinition Width="2*"></ColumnDefinition>
+                                        </Grid.ColumnDefinitions>
+                                        <DockPanel Grid.Column="0">
+                                            <WindowsFormsHost x:Name="wfhPadraoParesImpares" Visibility="Collapsed" UseLayoutRounding="True">
+                                                <rv:ReportViewer ShowToolBar="True" x:Name="ReportViewerwfhPadraoParesImpares"  PageCountMode="Actual"/>
+                                            </WindowsFormsHost>
+                                        </DockPanel>
+                                        <DockPanel HorizontalAlignment="Center" LastChildFill="False" Grid.Column="1">
+                                            <DockPanel DockPanel.Dock="Top">
+                                                <TextBox x:Name="txtFiltroParesImpares" MinWidth="50" MaxWidth="50" ToolTip="Frequência dos últimos jogos" Text="20" Controls:TextBoxHelper.Watermark="Filtrar Pares e  Ímpares" HorizontalContentAlignment="Center"/>
+                                                <Button x:Name="btnFiltroParesImpares" Click="BtnFiltroParesImpares_Click" Background="{DynamicResource AccentColorBrush}" Margin="1,0,0,0">Filtrar</Button>
+                                            </DockPanel>
+                                        </DockPanel>
+                                    </Grid>
+                                </Expander>
+                                <Expander KeyDown="HotKey_KeyDown" x:Name="exNumerosPrimos" x:Uid="0" Margin="0,10,0,0" Header="Números Primos" Cursor="Hand">
+                                    <Grid KeyDown="HotKey_KeyDown">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="180"></RowDefinition>
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="8*"></ColumnDefinition>
+                                            <ColumnDefinition Width="2*"></ColumnDefinition>
+                                        </Grid.ColumnDefinitions>
+                                        <DockPanel Grid.Column="0">
+                                            <WindowsFormsHost x:Name="wfhNumeroPrimos" Visibility="Collapsed" UseLayoutRounding="True">
+                                                <rv:ReportViewer ShowToolBar="True" x:Name="ReportViewerwfhNumerosPrimos"  PageCountMode="Actual"/>
+                                            </WindowsFormsHost>
+                                        </DockPanel>
+                                        <DockPanel HorizontalAlignment="Center" LastChildFill="False" Grid.Column="1">
+                                            <DockPanel DockPanel.Dock="Top">
+                                                <TextBox x:Name="txtFiltroPrimos" MinWidth="50" MaxWidth="50" ToolTip="Frequência dos números primos últimos jogos" Text="20" Controls:TextBoxHelper.Watermark="Filtrar Primos" HorizontalContentAlignment="Center"/>
+                                                <Button x:Name="btnFiltroPrimos"  Background="{DynamicResource AccentColorBrush}" Click="BtnFiltroPrimos_Click"  Margin="1,0,0,0">Filtrar</Button>
+                                            </DockPanel>
+                                        </DockPanel>
+                                    </Grid>
+                                </Expander>
+
+
+                            </StackPanel>
+                        </ScrollViewer>
+
+                    </Grid>
+                </Controls:MetroTabItem>
+
+                <Controls:MetroTabItem Header="Conferir"  KeyDown="HotKey_KeyDown">
+                    <Grid  KeyDown="HotKey_KeyDown">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Grid Grid.Column="0" Margin="0,15,10,0" KeyDown="HotKey_KeyDown">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="30"></RowDefinition>
+                                <RowDefinition Height="60"></RowDefinition>
+                                <RowDefinition Height="30"></RowDefinition>
+                                <RowDefinition Height="60"></RowDefinition>
+                                <RowDefinition Height="30"></RowDefinition>
+                                <RowDefinition Height="90"></RowDefinition>
+                                <RowDefinition Height="30"></RowDefinition>
+                                <RowDefinition Height="60"></RowDefinition>
+                                <RowDefinition Height="60"></RowDefinition>
+                                <RowDefinition Height="30"></RowDefinition>
+                                <RowDefinition Height="60"></RowDefinition>
+                                <RowDefinition Height="*"></RowDefinition>
+                            </Grid.RowDefinitions>
+
+                            <Grid Grid.Row="0"  KeyDown="HotKey_KeyDown">
+                                <TextBlock Background="AliceBlue" Text="Concursos" FontSize="20" TextAlignment="Center" Foreground="{DynamicResource AccentColorBrush}" VerticalAlignment="Center"></TextBlock>
+                            </Grid>
+
+                            <Grid Grid.Row="1"  KeyDown="HotKey_KeyDown">
+                                <DockPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                                    <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center">de</TextBlock>
+                                    <TextBox Text="{Binding Conferir.Concurso_Ini, ValidatesOnDataErrors=True, UpdateSourceTrigger=LostFocus, NotifyOnValidationError=True, Mode=TwoWay}" Margin="5 0 0 0" TextAlignment="Center" VerticalAlignment="Center" Width="50" HorizontalAlignment="Left"></TextBox>
+                                    <TextBlock Margin="5 0 0 0" HorizontalAlignment="Center" VerticalAlignment="Center">até</TextBlock>
+                                    <TextBox Text="{Binding Conferir.Concurso_End, ValidatesOnDataErrors=True, UpdateSourceTrigger=LostFocus, NotifyOnValidationError=True, Mode=TwoWay}" Margin="5 0 0 0" TextAlignment="Center" VerticalAlignment="Center" Width="50" HorizontalAlignment="Left"></TextBox>
+
+
+                                </DockPanel>
+                            </Grid>
+
+                            <Grid Grid.Row="2"  KeyDown="HotKey_KeyDown">
+                                <TextBlock Background="AliceBlue" Text="Filtrar - Pontos" FontSize="20" TextAlignment="Center" Foreground="{DynamicResource AccentColorBrush}" VerticalAlignment="Center"></TextBlock>
+                            </Grid>
+
+
+                            <Grid Grid.Row="3"  KeyDown="HotKey_KeyDown" VerticalAlignment="Center">
+                                <ListBox
+                                    x:Name="lstFiltroConferirPontos"
+                                     SelectedValue="{Binding Conferir.Filtro_Results, Mode=TwoWay}"
+                                     HorizontalContentAlignment="Center"
+                                     Margin="0 10 0 0"
+                                     Height="30"
+                                     VerticalAlignment="Center"
+                                     HorizontalAlignment="Stretch"></ListBox>
+                            </Grid>
+
+                            <Grid Grid.Row="4"  KeyDown="HotKey_KeyDown">
+                                <TextBlock Background="AliceBlue" Text="Manual" FontSize="20" TextAlignment="Center" Foreground="{DynamicResource AccentColorBrush}" VerticalAlignment="Center"></TextBlock>
+                            </Grid>
+
+                            <Grid Grid.Row="5"  KeyDown="HotKey_KeyDown">
+                                <StackPanel VerticalAlignment="Center">
+                                    <TextBlock HorizontalAlignment="Center" Margin="0 0 0 5"> Insira de 15 até 18 dezenas, separando-as com espaços</TextBlock>
+                                    <!--<TextBlock Margin="0 0 0 3" Foreground="Red">Exemplo: 01 02 03 04 05 06 07 08 09 10 11 12 13 14 15</TextBlock>-->
+                                    <TextBox Text="{Binding Conferir.Volante, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged, NotifyOnValidationError=True, Mode=TwoWay}"
+                                             TextAlignment="Center"
+                                             AcceptsReturn="True"
+                                             HorizontalAlignment="Stretch"
+                                             VerticalAlignment="Center"
+                                             HorizontalContentAlignment="Center"
+                                             Controls:TextBoxHelper.ClearTextButton="True"
+                                             Controls:TextBoxHelper.Watermark="Exemplo: 01 02 03 04 05 06 07 08 09 10 11 12 13 14 15" 
+                                             Controls:TextBoxHelper.UseFloatingWatermark="True"
+                                             Controls:TextBoxHelper.WatermarkAlignment="Center">
+
+                                    </TextBox>
+                                </StackPanel>
+                            </Grid>
+
+                            <Grid Grid.Row="6"  KeyDown="HotKey_KeyDown">
+                                <TextBlock Background="AliceBlue" Text="Arquivos" FontSize="20" TextAlignment="Center" Foreground="{DynamicResource AccentColorBrush}" VerticalAlignment="Center"></TextBlock>
+                            </Grid>
+
+                            <Grid Grid.Row="7" VerticalAlignment="Center"  KeyDown="HotKey_KeyDown" Margin="0 5 0 0">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="9*"></ColumnDefinition>
+                                    <ColumnDefinition Width="*"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <TextBox Grid.Column="0" VerticalAlignment="Center" KeyDown="HotKey_KeyDown" Margin="0 5 0 0"
+                                             HorizontalContentAlignment="Center"
+                                             Text="{Binding Conferir.Files.FileName}"  
+                                            TextAlignment="Center"
+                                             Controls:TextBoxHelper.Watermark="Utilize o botão ao lado para selecionar os arquivos"
+                                    ></TextBox>
+
+                                <Button Grid.Column="1" Margin="5 0 0 0" VerticalAlignment="Center"  Foreground="White" Background="{DynamicResource AccentColorBrush}" Command="{Binding Path=ImportArq}" ToolTip="Selecionar jogos">
+                                    <iconPacks:PackIconFontAwesome Height="15" Width="15" Foreground="Black" Kind="FileImportSolid"></iconPacks:PackIconFontAwesome>
+                                </Button>
+
+                            </Grid>
+
+                            <DockPanel Grid.Row="8"  KeyDown="HotKey_KeyDown" HorizontalAlignment="Center" VerticalAlignment="Center">
+                                <TextBlock VerticalAlignment="Center">Desconsiderar a(s)</TextBlock>
+                                <TextBox Text="{Binding Conferir.Pular_Linhas}" Margin="5 0 0 0" TextAlignment="Center" Width="50"></TextBox>
+                                <TextBlock Margin="5 0 0 0" VerticalAlignment="Center">primeira(s) linha(s)</TextBlock>
+                            </DockPanel>
+
+                            <Grid Grid.Row="9"  KeyDown="HotKey_KeyDown">
+                                <TextBlock Background="AliceBlue" Text="Output" FontSize="20" TextAlignment="Center" Foreground="{DynamicResource AccentColorBrush}" VerticalAlignment="Center"></TextBlock>
+                            </Grid>
+
+                            <Grid Grid.Row="10"  KeyDown="HotKey_KeyDown" HorizontalAlignment="Center" VerticalAlignment="Center">
+
+                                <StackPanel>
+                                <TextBlock>Utilizar jogos da Saída de Dados</TextBlock>
+                                
+                                <Controls:ToggleSwitch  Margin="0 10 0 0" Style="{StaticResource MahApps.Metro.Styles.ToggleSwitch.Win10}"
+                                    OnLabel="Sim" IsEnabled="{Binding Conferir.Habilita_Output}" IsChecked="{Binding Conferir.Output}"
+                                    HorizontalAlignment="Center" OffLabel="Não" OffSwitchBrush="Red" OnSwitchBrush="Green"/>
+                                </StackPanel>
+                            </Grid>
+
+                            <Grid Grid.Row="11"  KeyDown="HotKey_KeyDown">
+                                <DockPanel Grid.Row="9" HorizontalAlignment="Center" VerticalAlignment="Center">
+                                    <Button  Background="#FF989C9C" Command="{Binding Path=ClearConferir}" Foreground="#FFF2E3F2">LIMPAR</Button>
+                                    <Button  Margin="5,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Center" Command="{Binding Path=ExecutaConferencia}" Background="#FF0C904F" Foreground="#FFF4EAEA">Conferir</Button>
+                                </DockPanel>
+                            </Grid>
+
+                        </Grid>
+
+                        <!--<StackPanel Grid.Column="0" Margin="10,15,10,10">
+                            <DockPanel Grid.Row="0">
+
+                                <DockPanel DockPanel.Dock="Top">
+                                
+                                    
+                                </DockPanel>
+                                -->
+                        <!--<DockPanel DockPanel.Dock="Top">
+                                    <TextBlock VerticalAlignment="Center" Text="Jogos" />-->
+
+
+
+                        <!--<Button IsTabStop="False" Width="30" Height="30" HorizontalAlignment="Right" Background="{DynamicResource AccentColorBrush}" Click="Button_Click">
+                                        <iconPacks:PackIconFontAwesome Foreground="White" Kind="BackspaceSolid" Height="15"></iconPacks:PackIconFontAwesome>
+                                    </Button>
+                                </DockPanel>
+
+                                <DockPanel DockPanel.Dock="Top" Margin="5">
+                                    <TextBox x:Name="txbSaida" Controls:TextBoxHelper.IsWaitingForData="True" TabIndex="0" VerticalScrollBarVisibility="Auto" AcceptsReturn="True" Controls:ScrollViewerHelper.IsHorizontalScrollWheelEnabled="True" Controls:TextBoxHelper.WatermarkWrapping="Wrap"></TextBox>
+                                </DockPanel>-->
+                        <!--
+                            </DockPanel>
+                              
+
+                                    -->
+                        <!--<TextBox x:Name="txtTotalPs" Controls:TextBoxHelper.Watermark="txtTotal Ps" TextAlignment="Center">816</TextBox>-->
+                        <!--<TextBox x:Name="txtRage" Controls:TextBoxHelper.Watermark="rage" TextAlignment="Center">35</TextBox>-->
+                        <!--
+                            <TextBox x:Name="Concr_n" Controls:TextBoxHelper.Watermark="Concurso" TextAlignment="Center">1846</TextBox>
+                            <TextBox x:Name="txt_Qntd_Arquivos" Controls:TextBoxHelper.Watermark="Qntd Arquivos" TextAlignment="Center">18</TextBox>
+                            
+                            <RichTextBox x:Name="rchBoxResults" VerticalScrollBarVisibility="Auto" Height="500"/>
+
+                            <Button  Margin="0,10,0,0" HorizontalAlignment="Center" Click="Button_Click" VerticalAlignment="Center">teste</Button>
+
+                        </StackPanel>-->
+
+                        <Grid Grid.Column="1" Margin="0 15 0 50">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="30"></RowDefinition>
+                                    <RowDefinition Height="4*"></RowDefinition>
+                                    <RowDefinition Height="30"></RowDefinition>
+                                    <RowDefinition Height="2*"></RowDefinition>
+                                </Grid.RowDefinitions>
+
+                                <Grid Grid.Row="0">
+                                    <TextBlock Background="AliceBlue" Text="Resultado" FontSize="20" TextAlignment="Center" Foreground="{DynamicResource AccentColorBrush}" VerticalAlignment="Center"></TextBlock>
+                                </Grid>
+                                <Grid Grid.Row="1">
+                                    <TextBox Margin="0 5 0 10" TextAlignment="Center" Text="{Binding Conferir.Results, Mode=TwoWay}" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto"></TextBox>
+                                </Grid>
+
+                                <Grid Grid.Row="2">
+                                    <TextBlock Background="AliceBlue"  Text="Resumo - Resultado" FontSize="20" TextAlignment="Center" Foreground="{DynamicResource AccentColorBrush}" VerticalAlignment="Center"></TextBlock>
+                                </Grid>
+
+                                <Grid Grid.Row="3">
+                                    <TextBox Margin="0 5 0 0" TextAlignment="Center" Text="{Binding Conferir.Resumo_Results, Mode=TwoWay}" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto"></TextBox>
+                                </Grid>
+
+
+
+                            </Grid>
+
+
+                        </Grid>
+                    </Grid>
+
+                </Controls:MetroTabItem>
+
+
+            </Controls:MetroTabControl>
+        </Grid>
+    </Grid>
+</Controls:MetroWindow>

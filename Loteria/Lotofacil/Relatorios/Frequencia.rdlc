@@ -1,0 +1,1947 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <Body>
+    <ReportItems>
+      <Tablix Name="Tablix8">
+        <TablixBody>
+          <TablixColumns>
+            <TablixColumn>
+              <Width>14.72861cm</Width>
+            </TablixColumn>
+          </TablixColumns>
+          <TablixRows>
+            <TablixRow>
+              <Height>3.21286cm</Height>
+              <TablixCells>
+                <TablixCell>
+                  <CellContents>
+                    <Rectangle Name="Rectangle7">
+                      <ReportItems>
+                        <Rectangle Name="Rectangle2">
+                          <ReportItems>
+                            <Textbox Name="Max_1">
+                              <CanGrow>true</CanGrow>
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value>=Fields!Max_1.Value</Value>
+                                      <Style>
+                                        <Color>Green</Color>
+                                      </Style>
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style />
+                                </Paragraph>
+                              </Paragraphs>
+                              <rd:DefaultName>Max_1</rd:DefaultName>
+                              <Top>0.89603cm</Top>
+                              <Left>2.70379cm</Left>
+                              <Height>0.24017cm</Height>
+                              <Width>2.22484cm</Width>
+                              <Style>
+                                <Border>
+                                  <Style>None</Style>
+                                </Border>
+                              </Style>
+                            </Textbox>
+                            <Textbox Name="Max_2">
+                              <CanGrow>true</CanGrow>
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value>=Fields!Max_2.Value</Value>
+                                      <Style>
+                                        <Color>Green</Color>
+                                      </Style>
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style />
+                                </Paragraph>
+                              </Paragraphs>
+                              <rd:DefaultName>Max_1</rd:DefaultName>
+                              <Top>1.16331cm</Top>
+                              <Left>2.70379cm</Left>
+                              <Height>0.24017cm</Height>
+                              <Width>2.22484cm</Width>
+                              <ZIndex>1</ZIndex>
+                              <Style>
+                                <Border>
+                                  <Style>None</Style>
+                                </Border>
+                              </Style>
+                            </Textbox>
+                            <Textbox Name="Max_3">
+                              <CanGrow>true</CanGrow>
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value>=Fields!Max_3.Value</Value>
+                                      <Style>
+                                        <Color>Green</Color>
+                                      </Style>
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style />
+                                </Paragraph>
+                              </Paragraphs>
+                              <rd:DefaultName>Max_1</rd:DefaultName>
+                              <Top>1.43059cm</Top>
+                              <Left>2.70379cm</Left>
+                              <Height>0.24017cm</Height>
+                              <Width>2.22484cm</Width>
+                              <ZIndex>2</ZIndex>
+                              <Style>
+                                <Border>
+                                  <Style>None</Style>
+                                </Border>
+                              </Style>
+                            </Textbox>
+                            <Textbox Name="Max_4">
+                              <CanGrow>true</CanGrow>
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value>=Fields!Max_4.Value</Value>
+                                      <Style>
+                                        <Color>Green</Color>
+                                      </Style>
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style />
+                                </Paragraph>
+                              </Paragraphs>
+                              <rd:DefaultName>Max_1</rd:DefaultName>
+                              <Top>1.69787cm</Top>
+                              <Left>2.70379cm</Left>
+                              <Height>0.24017cm</Height>
+                              <Width>2.22484cm</Width>
+                              <ZIndex>3</ZIndex>
+                              <Style>
+                                <Border>
+                                  <Style>None</Style>
+                                </Border>
+                              </Style>
+                            </Textbox>
+                            <Textbox Name="Max_5">
+                              <CanGrow>true</CanGrow>
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value>=Fields!Max_5.Value</Value>
+                                      <Style>
+                                        <Color>Green</Color>
+                                      </Style>
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style />
+                                </Paragraph>
+                              </Paragraphs>
+                              <rd:DefaultName>Max_1</rd:DefaultName>
+                              <Top>1.96515cm</Top>
+                              <Left>2.70379cm</Left>
+                              <Height>0.24017cm</Height>
+                              <Width>2.22484cm</Width>
+                              <ZIndex>4</ZIndex>
+                              <Style>
+                                <Border>
+                                  <Style>None</Style>
+                                </Border>
+                              </Style>
+                            </Textbox>
+                            <Textbox Name="Max_6">
+                              <CanGrow>true</CanGrow>
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value>=Fields!Max_6.Value</Value>
+                                      <Style>
+                                        <Color>Green</Color>
+                                      </Style>
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style />
+                                </Paragraph>
+                              </Paragraphs>
+                              <rd:DefaultName>Max_1</rd:DefaultName>
+                              <Top>2.23243cm</Top>
+                              <Left>2.70379cm</Left>
+                              <Height>0.24017cm</Height>
+                              <Width>2.22484cm</Width>
+                              <ZIndex>5</ZIndex>
+                              <Style>
+                                <Border>
+                                  <Style>None</Style>
+                                </Border>
+                              </Style>
+                            </Textbox>
+                            <Textbox Name="Max_7">
+                              <CanGrow>true</CanGrow>
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value>=Fields!Max_7.Value</Value>
+                                      <Style>
+                                        <Color>Green</Color>
+                                      </Style>
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style />
+                                </Paragraph>
+                              </Paragraphs>
+                              <rd:DefaultName>Max_1</rd:DefaultName>
+                              <Top>2.49971cm</Top>
+                              <Left>2.70379cm</Left>
+                              <Height>0.24017cm</Height>
+                              <Width>2.22484cm</Width>
+                              <ZIndex>6</ZIndex>
+                              <Style>
+                                <Border>
+                                  <Style>None</Style>
+                                </Border>
+                              </Style>
+                            </Textbox>
+                            <Textbox Name="Max_8">
+                              <CanGrow>true</CanGrow>
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value>=Fields!Max_8.Value</Value>
+                                      <Style>
+                                        <Color>Green</Color>
+                                      </Style>
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style />
+                                </Paragraph>
+                              </Paragraphs>
+                              <rd:DefaultName>Max_1</rd:DefaultName>
+                              <Top>2.76699cm</Top>
+                              <Left>2.70379cm</Left>
+                              <Height>0.24017cm</Height>
+                              <Width>2.22484cm</Width>
+                              <ZIndex>7</ZIndex>
+                              <Style>
+                                <Border>
+                                  <Style>None</Style>
+                                </Border>
+                              </Style>
+                            </Textbox>
+                            <Textbox Name="Max_9">
+                              <CanGrow>true</CanGrow>
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value>=Fields!Min_1.Value</Value>
+                                      <Style>
+                                        <Color>Red</Color>
+                                      </Style>
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style />
+                                </Paragraph>
+                              </Paragraphs>
+                              <rd:DefaultName>Max_1</rd:DefaultName>
+                              <Top>0.89298cm</Top>
+                              <Left>0.27081cm</Left>
+                              <Height>0.24017cm</Height>
+                              <Width>2.22484cm</Width>
+                              <ZIndex>8</ZIndex>
+                              <Style>
+                                <Border>
+                                  <Style>None</Style>
+                                </Border>
+                              </Style>
+                            </Textbox>
+                            <Textbox Name="Max_10">
+                              <CanGrow>true</CanGrow>
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value>=Fields!Min_2.Value</Value>
+                                      <Style>
+                                        <Color>Red</Color>
+                                      </Style>
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style />
+                                </Paragraph>
+                              </Paragraphs>
+                              <rd:DefaultName>Max_1</rd:DefaultName>
+                              <Top>1.16026cm</Top>
+                              <Left>0.27081cm</Left>
+                              <Height>0.24017cm</Height>
+                              <Width>2.22484cm</Width>
+                              <ZIndex>9</ZIndex>
+                              <Style>
+                                <Border>
+                                  <Style>None</Style>
+                                </Border>
+                              </Style>
+                            </Textbox>
+                            <Textbox Name="Max_11">
+                              <CanGrow>true</CanGrow>
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value>=Fields!Min_3.Value</Value>
+                                      <Style>
+                                        <Color>Red</Color>
+                                      </Style>
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style />
+                                </Paragraph>
+                              </Paragraphs>
+                              <rd:DefaultName>Max_1</rd:DefaultName>
+                              <Top>1.42754cm</Top>
+                              <Left>0.27081cm</Left>
+                              <Height>0.24017cm</Height>
+                              <Width>2.22484cm</Width>
+                              <ZIndex>10</ZIndex>
+                              <Style>
+                                <Border>
+                                  <Style>None</Style>
+                                </Border>
+                              </Style>
+                            </Textbox>
+                            <Textbox Name="Max_12">
+                              <CanGrow>true</CanGrow>
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value>=Fields!Min_4.Value</Value>
+                                      <Style>
+                                        <Color>Red</Color>
+                                      </Style>
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style />
+                                </Paragraph>
+                              </Paragraphs>
+                              <rd:DefaultName>Max_1</rd:DefaultName>
+                              <Top>1.69482cm</Top>
+                              <Left>0.27081cm</Left>
+                              <Height>0.24017cm</Height>
+                              <Width>2.22484cm</Width>
+                              <ZIndex>11</ZIndex>
+                              <Style>
+                                <Border>
+                                  <Style>None</Style>
+                                </Border>
+                              </Style>
+                            </Textbox>
+                            <Textbox Name="Max_13">
+                              <CanGrow>true</CanGrow>
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value>=Fields!Min_5.Value</Value>
+                                      <Style>
+                                        <Color>Red</Color>
+                                      </Style>
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style />
+                                </Paragraph>
+                              </Paragraphs>
+                              <rd:DefaultName>Max_1</rd:DefaultName>
+                              <Top>1.9621cm</Top>
+                              <Left>0.27081cm</Left>
+                              <Height>0.24017cm</Height>
+                              <Width>2.22484cm</Width>
+                              <ZIndex>12</ZIndex>
+                              <Style>
+                                <Border>
+                                  <Style>None</Style>
+                                </Border>
+                              </Style>
+                            </Textbox>
+                            <Textbox Name="Max_14">
+                              <CanGrow>true</CanGrow>
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value>=Fields!Min_6.Value</Value>
+                                      <Style>
+                                        <Color>Red</Color>
+                                      </Style>
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style />
+                                </Paragraph>
+                              </Paragraphs>
+                              <rd:DefaultName>Max_1</rd:DefaultName>
+                              <Top>2.22938cm</Top>
+                              <Left>0.27081cm</Left>
+                              <Height>0.24017cm</Height>
+                              <Width>2.22484cm</Width>
+                              <ZIndex>13</ZIndex>
+                              <Style>
+                                <Border>
+                                  <Style>None</Style>
+                                </Border>
+                              </Style>
+                            </Textbox>
+                            <Textbox Name="Max_15">
+                              <CanGrow>true</CanGrow>
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value>=Fields!Min_7.Value</Value>
+                                      <Style>
+                                        <Color>Red</Color>
+                                      </Style>
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style />
+                                </Paragraph>
+                              </Paragraphs>
+                              <rd:DefaultName>Max_1</rd:DefaultName>
+                              <Top>2.49666cm</Top>
+                              <Left>0.27081cm</Left>
+                              <Height>0.24017cm</Height>
+                              <Width>2.22484cm</Width>
+                              <ZIndex>14</ZIndex>
+                              <Style>
+                                <Border>
+                                  <Style>None</Style>
+                                </Border>
+                              </Style>
+                            </Textbox>
+                            <Textbox Name="Max_16">
+                              <CanGrow>true</CanGrow>
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value>=Fields!Min_8.Value</Value>
+                                      <Style>
+                                        <Color>Red</Color>
+                                      </Style>
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style />
+                                </Paragraph>
+                              </Paragraphs>
+                              <rd:DefaultName>Max_1</rd:DefaultName>
+                              <Top>2.76394cm</Top>
+                              <Left>0.27081cm</Left>
+                              <Height>0.24017cm</Height>
+                              <Width>2.22484cm</Width>
+                              <ZIndex>15</ZIndex>
+                              <Style>
+                                <Border>
+                                  <Style>None</Style>
+                                </Border>
+                              </Style>
+                            </Textbox>
+                            <Textbox Name="Textbox2">
+                              <CanGrow>true</CanGrow>
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value>+ FREQUENTES</Value>
+                                      <Style>
+                                        <FontSize>7pt</FontSize>
+                                        <Color>AntiqueWhite</Color>
+                                      </Style>
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style>
+                                    <TextAlign>Center</TextAlign>
+                                  </Style>
+                                </Paragraph>
+                              </Paragraphs>
+                              <rd:DefaultName>Textbox2</rd:DefaultName>
+                              <Top>0.28547cm</Top>
+                              <Left>2.70379cm</Left>
+                              <Height>0.346cm</Height>
+                              <Width>2.22484cm</Width>
+                              <ZIndex>16</ZIndex>
+                              <Style>
+                                <Border>
+                                  <Style>None</Style>
+                                </Border>
+                                <BackgroundColor>Green</BackgroundColor>
+                                <VerticalAlign>Middle</VerticalAlign>
+                              </Style>
+                            </Textbox>
+                            <Textbox Name="Textbox3">
+                              <CanGrow>true</CanGrow>
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value>- FREQUENTES</Value>
+                                      <Style>
+                                        <FontSize>7pt</FontSize>
+                                        <Color>AntiqueWhite</Color>
+                                      </Style>
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style>
+                                    <TextAlign>Center</TextAlign>
+                                  </Style>
+                                </Paragraph>
+                              </Paragraphs>
+                              <rd:DefaultName>Textbox2</rd:DefaultName>
+                              <Top>0.28242cm</Top>
+                              <Left>0.27081cm</Left>
+                              <Height>0.346cm</Height>
+                              <Width>2.22484cm</Width>
+                              <ZIndex>17</ZIndex>
+                              <Style>
+                                <Border>
+                                  <Style>None</Style>
+                                </Border>
+                                <BackgroundColor>Brown</BackgroundColor>
+                                <VerticalAlign>Middle</VerticalAlign>
+                              </Style>
+                            </Textbox>
+                            <Textbox Name="Textbox19">
+                              <CanGrow>true</CanGrow>
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value>  QNTD        DEZENA</Value>
+                                      <Style>
+                                        <FontFamily>Calibri</FontFamily>
+                                        <FontSize>7pt</FontSize>
+                                        <Color>SeaGreen</Color>
+                                      </Style>
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style>
+                                    <TextAlign>Left</TextAlign>
+                                  </Style>
+                                </Paragraph>
+                              </Paragraphs>
+                              <rd:DefaultName>Textbox19</rd:DefaultName>
+                              <Top>0.63879cm</Top>
+                              <Left>2.70379cm</Left>
+                              <Height>0.28cm</Height>
+                              <Width>2.22484cm</Width>
+                              <ZIndex>18</ZIndex>
+                              <Style>
+                                <Border>
+                                  <Style>None</Style>
+                                </Border>
+                              </Style>
+                            </Textbox>
+                            <Textbox Name="Textbox20">
+                              <CanGrow>true</CanGrow>
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value>  QNTD        DEZENA</Value>
+                                      <Style>
+                                        <FontFamily>Calibri</FontFamily>
+                                        <FontSize>7pt</FontSize>
+                                        <Color>Red</Color>
+                                      </Style>
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style>
+                                    <TextAlign>Left</TextAlign>
+                                  </Style>
+                                </Paragraph>
+                              </Paragraphs>
+                              <rd:DefaultName>Textbox19</rd:DefaultName>
+                              <Top>0.62842cm</Top>
+                              <Left>0.27081cm</Left>
+                              <Height>0.28cm</Height>
+                              <Width>2.22484cm</Width>
+                              <ZIndex>19</ZIndex>
+                              <Style>
+                                <Border>
+                                  <Style>None</Style>
+                                </Border>
+                              </Style>
+                            </Textbox>
+                          </ReportItems>
+                          <KeepTogether>true</KeepTogether>
+                          <Left>9.65827cm</Left>
+                          <Height>3.21286cm</Height>
+                          <Width>5.07033cm</Width>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                          </Style>
+                        </Rectangle>
+                        <Rectangle Name="Rectangle1">
+                          <ReportItems>
+                            <Textbox Name="bola_26">
+                              <CanGrow>true</CanGrow>
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value>="02 = " &amp; Format(Fields!bola_2.Value,"d2")</Value>
+                                      <Style>
+                                        <Color>White</Color>
+                                      </Style>
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style>
+                                    <TextAlign>Center</TextAlign>
+                                  </Style>
+                                </Paragraph>
+                              </Paragraphs>
+                              <rd:DefaultName>bola_26</rd:DefaultName>
+                              <Top>1.0531cm</Top>
+                              <Height>0.3cm</Height>
+                              <Width>1.83587cm</Width>
+                              <ToolTip>Dezena e sua respectiva frequência</ToolTip>
+                              <Style>
+                                <Border>
+                                  <Style>None</Style>
+                                </Border>
+                                <BackgroundColor>=IIf(Fields!bola_2.Value &gt;= CInt(Mid(Fields!Max_8.Value,1,5)), "SeaGreen",
+IIf(Fields!bola_2.Value &lt;= CInt(Mid(Fields!Min_8.Value,1,5)), "Tomato", "Gold"))</BackgroundColor>
+                              </Style>
+                            </Textbox>
+                            <Textbox Name="bola_111">
+                              <CanGrow>true</CanGrow>
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value>="03 = " &amp; Format(Fields!bola_3.Value,"d2")</Value>
+                                      <Style>
+                                        <Color>White</Color>
+                                      </Style>
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style>
+                                    <TextAlign>Center</TextAlign>
+                                  </Style>
+                                </Paragraph>
+                              </Paragraphs>
+                              <rd:DefaultName>bola_110</rd:DefaultName>
+                              <Top>1.49731cm</Top>
+                              <Height>0.3cm</Height>
+                              <Width>1.83587cm</Width>
+                              <ZIndex>1</ZIndex>
+                              <ToolTip>Dezena e sua respectiva frequência</ToolTip>
+                              <Style>
+                                <Border>
+                                  <Style>None</Style>
+                                </Border>
+                                <BackgroundColor>=IIf(Fields!bola_3.Value &gt;= CInt(Mid(Fields!Max_8.Value,1,5)), "SeaGreen",
+IIf(Fields!bola_3.Value &lt;= CInt(Mid(Fields!Min_8.Value,1,5)), "Tomato", "Gold"))</BackgroundColor>
+                              </Style>
+                            </Textbox>
+                            <Textbox Name="bola_27">
+                              <CanGrow>true</CanGrow>
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value>="04 = " &amp; Format(Fields!bola_4.Value,"d2")</Value>
+                                      <Style>
+                                        <Color>White</Color>
+                                      </Style>
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style>
+                                    <TextAlign>Center</TextAlign>
+                                  </Style>
+                                </Paragraph>
+                              </Paragraphs>
+                              <rd:DefaultName>bola_26</rd:DefaultName>
+                              <Top>1.96103cm</Top>
+                              <Height>0.3cm</Height>
+                              <Width>1.83587cm</Width>
+                              <ZIndex>2</ZIndex>
+                              <ToolTip>Dezena e sua respectiva frequência</ToolTip>
+                              <Style>
+                                <Border>
+                                  <Style>None</Style>
+                                </Border>
+                                <BackgroundColor>=IIf(Fields!bola_4.Value &gt;= CInt(Mid(Fields!Max_8.Value,1,5)), "SeaGreen",
+IIf(Fields!bola_4.Value &lt;= CInt(Mid(Fields!Min_8.Value,1,5)), "Tomato", "Gold"))</BackgroundColor>
+                              </Style>
+                            </Textbox>
+                            <Textbox Name="bola_112">
+                              <CanGrow>true</CanGrow>
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value>="06 = " &amp; Format(Fields!bola_6.Value,"d2")</Value>
+                                      <Style>
+                                        <Color>White</Color>
+                                      </Style>
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style>
+                                    <TextAlign>Center</TextAlign>
+                                  </Style>
+                                </Paragraph>
+                              </Paragraphs>
+                              <rd:DefaultName>bola_110</rd:DefaultName>
+                              <Top>0.59914cm</Top>
+                              <Left>1.91701cm</Left>
+                              <Height>0.3cm</Height>
+                              <Width>1.83587cm</Width>
+                              <ZIndex>3</ZIndex>
+                              <ToolTip>Dezena e sua respectiva frequência</ToolTip>
+                              <Style>
+                                <Border>
+                                  <Style>None</Style>
+                                </Border>
+                                <BackgroundColor>=IIf(Fields!bola_6.Value &gt;= CInt(Mid(Fields!Max_8.Value,1,5)), "SeaGreen",
+IIf(Fields!bola_6.Value &lt;= CInt(Mid(Fields!Min_8.Value,1,5)), "Tomato", "Gold"))</BackgroundColor>
+                              </Style>
+                            </Textbox>
+                            <Textbox Name="bola_28">
+                              <CanGrow>true</CanGrow>
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value>="07 = " &amp; Format(Fields!bola_7.Value,"d2")</Value>
+                                      <Style>
+                                        <Color>White</Color>
+                                      </Style>
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style>
+                                    <TextAlign>Center</TextAlign>
+                                  </Style>
+                                </Paragraph>
+                              </Paragraphs>
+                              <rd:DefaultName>bola_26</rd:DefaultName>
+                              <Top>1.0531cm</Top>
+                              <Left>1.91701cm</Left>
+                              <Height>0.3cm</Height>
+                              <Width>1.83587cm</Width>
+                              <ZIndex>4</ZIndex>
+                              <ToolTip>Dezena e sua respectiva frequência</ToolTip>
+                              <Style>
+                                <Border>
+                                  <Style>None</Style>
+                                </Border>
+                                <BackgroundColor>=IIf(Fields!bola_7.Value &gt;= CInt(Mid(Fields!Max_8.Value,1,5)), "SeaGreen",
+IIf(Fields!bola_7.Value &lt;= CInt(Mid(Fields!Min_8.Value,1,5)), "Tomato", "Gold"))</BackgroundColor>
+                              </Style>
+                            </Textbox>
+                            <Textbox Name="bola_113">
+                              <CanGrow>true</CanGrow>
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value>="08 = " &amp; Format(Fields!bola_8.Value,"d2")</Value>
+                                      <Style>
+                                        <Color>White</Color>
+                                      </Style>
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style>
+                                    <TextAlign>Center</TextAlign>
+                                  </Style>
+                                </Paragraph>
+                              </Paragraphs>
+                              <rd:DefaultName>bola_110</rd:DefaultName>
+                              <Top>1.49731cm</Top>
+                              <Left>1.91701cm</Left>
+                              <Height>0.3cm</Height>
+                              <Width>1.83587cm</Width>
+                              <ZIndex>5</ZIndex>
+                              <ToolTip>Dezena e sua respectiva frequência</ToolTip>
+                              <Style>
+                                <Border>
+                                  <Style>None</Style>
+                                </Border>
+                                <BackgroundColor>=IIf(Fields!bola_8.Value &gt;= CInt(Mid(Fields!Max_8.Value,1,5)), "SeaGreen",
+IIf(Fields!bola_8.Value &lt;= CInt(Mid(Fields!Min_8.Value,1,5)), "Tomato", "Gold"))</BackgroundColor>
+                              </Style>
+                            </Textbox>
+                            <Textbox Name="bola_29">
+                              <CanGrow>true</CanGrow>
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value>="09 = " &amp; Format(Fields!bola_9.Value,"d2")</Value>
+                                      <Style>
+                                        <Color>White</Color>
+                                      </Style>
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style>
+                                    <TextAlign>Center</TextAlign>
+                                  </Style>
+                                </Paragraph>
+                              </Paragraphs>
+                              <rd:DefaultName>bola_26</rd:DefaultName>
+                              <Top>1.96103cm</Top>
+                              <Left>1.91701cm</Left>
+                              <Height>0.3cm</Height>
+                              <Width>1.83587cm</Width>
+                              <ZIndex>6</ZIndex>
+                              <ToolTip>Dezena e sua respectiva frequência</ToolTip>
+                              <Style>
+                                <Border>
+                                  <Style>None</Style>
+                                </Border>
+                                <BackgroundColor>=IIf(Fields!bola_9.Value &gt;= CInt(Mid(Fields!Max_8.Value,1,5)), "SeaGreen",
+IIf(Fields!bola_9.Value &lt;= CInt(Mid(Fields!Min_8.Value,1,5)), "Tomato", "Gold"))</BackgroundColor>
+                              </Style>
+                            </Textbox>
+                            <Textbox Name="bola_114">
+                              <CanGrow>true</CanGrow>
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value>="11 = " &amp; Format(Fields!bola_11.Value,"d2")</Value>
+                                      <Style>
+                                        <Color>White</Color>
+                                      </Style>
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style>
+                                    <TextAlign>Center</TextAlign>
+                                  </Style>
+                                </Paragraph>
+                              </Paragraphs>
+                              <rd:DefaultName>bola_110</rd:DefaultName>
+                              <Top>0.59914cm</Top>
+                              <Left>3.83926cm</Left>
+                              <Height>0.3cm</Height>
+                              <Width>1.83587cm</Width>
+                              <ZIndex>7</ZIndex>
+                              <ToolTip>Dezena e sua respectiva frequência</ToolTip>
+                              <Style>
+                                <Border>
+                                  <Style>None</Style>
+                                </Border>
+                                <BackgroundColor>=IIf(Fields!bola_11.Value &gt;= CInt(Mid(Fields!Max_8.Value,1,5)), "SeaGreen",
+IIf(Fields!bola_11.Value &lt;= CInt(Mid(Fields!Min_8.Value,1,5)), "Tomato", "Gold"))</BackgroundColor>
+                              </Style>
+                            </Textbox>
+                            <Textbox Name="bola_30">
+                              <CanGrow>true</CanGrow>
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value>="12 = " &amp; Format(Fields!bola_12.Value,"d2")</Value>
+                                      <Style>
+                                        <Color>White</Color>
+                                      </Style>
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style>
+                                    <TextAlign>Center</TextAlign>
+                                  </Style>
+                                </Paragraph>
+                              </Paragraphs>
+                              <rd:DefaultName>bola_26</rd:DefaultName>
+                              <Top>1.0531cm</Top>
+                              <Left>3.83926cm</Left>
+                              <Height>0.3cm</Height>
+                              <Width>1.83587cm</Width>
+                              <ZIndex>8</ZIndex>
+                              <ToolTip>Dezena e sua respectiva frequência</ToolTip>
+                              <Style>
+                                <Border>
+                                  <Style>None</Style>
+                                </Border>
+                                <BackgroundColor>=IIf(Fields!bola_12.Value &gt;= CInt(Mid(Fields!Max_8.Value,1,5)), "SeaGreen",
+IIf(Fields!bola_12.Value &lt;= CInt(Mid(Fields!Min_8.Value,1,5)), "Tomato", "Gold"))</BackgroundColor>
+                              </Style>
+                            </Textbox>
+                            <Textbox Name="bola_115">
+                              <CanGrow>true</CanGrow>
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value>="13 = " &amp; Format(Fields!bola_13.Value,"d2")</Value>
+                                      <Style>
+                                        <Color>White</Color>
+                                      </Style>
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style>
+                                    <TextAlign>Center</TextAlign>
+                                  </Style>
+                                </Paragraph>
+                              </Paragraphs>
+                              <rd:DefaultName>bola_110</rd:DefaultName>
+                              <Top>1.49731cm</Top>
+                              <Left>3.83926cm</Left>
+                              <Height>0.3cm</Height>
+                              <Width>1.83587cm</Width>
+                              <ZIndex>9</ZIndex>
+                              <ToolTip>Dezena e sua respectiva frequência</ToolTip>
+                              <Style>
+                                <Border>
+                                  <Style>None</Style>
+                                </Border>
+                                <BackgroundColor>=IIf(Fields!bola_13.Value &gt;= CInt(Mid(Fields!Max_8.Value,1,5)), "SeaGreen",
+IIf(Fields!bola_13.Value &lt;= CInt(Mid(Fields!Min_8.Value,1,5)), "Tomato", "Gold"))</BackgroundColor>
+                              </Style>
+                            </Textbox>
+                            <Textbox Name="bola_31">
+                              <CanGrow>true</CanGrow>
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value>="14 = " &amp; Format(Fields!bola_14.Value,"d2")</Value>
+                                      <Style>
+                                        <Color>White</Color>
+                                      </Style>
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style>
+                                    <TextAlign>Center</TextAlign>
+                                  </Style>
+                                </Paragraph>
+                              </Paragraphs>
+                              <rd:DefaultName>bola_26</rd:DefaultName>
+                              <Top>1.96103cm</Top>
+                              <Left>3.83926cm</Left>
+                              <Height>0.3cm</Height>
+                              <Width>1.83587cm</Width>
+                              <ZIndex>10</ZIndex>
+                              <ToolTip>Dezena e sua respectiva frequência</ToolTip>
+                              <Style>
+                                <Border>
+                                  <Style>None</Style>
+                                </Border>
+                                <BackgroundColor>=IIf(Fields!bola_14.Value &gt;= CInt(Mid(Fields!Max_8.Value,1,5)), "SeaGreen",
+IIf(Fields!bola_14.Value &lt;= CInt(Mid(Fields!Min_8.Value,1,5)), "Tomato", "Gold"))</BackgroundColor>
+                              </Style>
+                            </Textbox>
+                            <Textbox Name="bola_116">
+                              <CanGrow>true</CanGrow>
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value>="16 = " &amp; Format(Fields!bola_16.Value,"d2")</Value>
+                                      <Style>
+                                        <Color>White</Color>
+                                      </Style>
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style>
+                                    <TextAlign>Center</TextAlign>
+                                  </Style>
+                                </Paragraph>
+                              </Paragraphs>
+                              <rd:DefaultName>bola_110</rd:DefaultName>
+                              <Top>0.59914cm</Top>
+                              <Left>5.79326cm</Left>
+                              <Height>0.3cm</Height>
+                              <Width>1.83587cm</Width>
+                              <ZIndex>11</ZIndex>
+                              <ToolTip>Dezena e sua respectiva frequência</ToolTip>
+                              <Style>
+                                <Border>
+                                  <Style>None</Style>
+                                </Border>
+                                <BackgroundColor>=IIf(Fields!bola_16.Value &gt;= CInt(Mid(Fields!Max_8.Value,1,5)), "SeaGreen",
+IIf(Fields!bola_16.Value &lt;= CInt(Mid(Fields!Min_8.Value,1,5)), "Tomato", "Gold"))</BackgroundColor>
+                              </Style>
+                            </Textbox>
+                            <Textbox Name="bola_32">
+                              <CanGrow>true</CanGrow>
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value>="17 = " &amp; Format(Fields!bola_17.Value,"d2")</Value>
+                                      <Style>
+                                        <Color>White</Color>
+                                      </Style>
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style>
+                                    <TextAlign>Center</TextAlign>
+                                  </Style>
+                                </Paragraph>
+                              </Paragraphs>
+                              <rd:DefaultName>bola_26</rd:DefaultName>
+                              <Top>1.0531cm</Top>
+                              <Left>5.79326cm</Left>
+                              <Height>0.3cm</Height>
+                              <Width>1.83587cm</Width>
+                              <ZIndex>12</ZIndex>
+                              <ToolTip>Dezena e sua respectiva frequência</ToolTip>
+                              <Style>
+                                <Border>
+                                  <Style>None</Style>
+                                </Border>
+                                <BackgroundColor>=IIf(Fields!bola_17.Value &gt;= CInt(Mid(Fields!Max_8.Value,1,5)), "SeaGreen",
+IIf(Fields!bola_17.Value &lt;= CInt(Mid(Fields!Min_8.Value,1,5)), "Tomato", "Gold"))</BackgroundColor>
+                              </Style>
+                            </Textbox>
+                            <Textbox Name="bola_117">
+                              <CanGrow>true</CanGrow>
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value>="18 = " &amp; Format(Fields!bola_18.Value,"d2")</Value>
+                                      <Style>
+                                        <Color>White</Color>
+                                      </Style>
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style>
+                                    <TextAlign>Center</TextAlign>
+                                  </Style>
+                                </Paragraph>
+                              </Paragraphs>
+                              <rd:DefaultName>bola_110</rd:DefaultName>
+                              <Top>1.49731cm</Top>
+                              <Left>5.79326cm</Left>
+                              <Height>0.3cm</Height>
+                              <Width>1.83587cm</Width>
+                              <ZIndex>13</ZIndex>
+                              <ToolTip>Dezena e sua respectiva frequência</ToolTip>
+                              <Style>
+                                <Border>
+                                  <Style>None</Style>
+                                </Border>
+                                <BackgroundColor>=IIf(Fields!bola_18.Value &gt;= CInt(Mid(Fields!Max_8.Value,1,5)), "SeaGreen",
+IIf(Fields!bola_18.Value &lt;= CInt(Mid(Fields!Min_8.Value,1,5)), "Tomato", "Gold"))</BackgroundColor>
+                              </Style>
+                            </Textbox>
+                            <Textbox Name="bola_33">
+                              <CanGrow>true</CanGrow>
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value>="19 = " &amp; Format(Fields!bola_19.Value,"d2")</Value>
+                                      <Style>
+                                        <Color>White</Color>
+                                      </Style>
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style>
+                                    <TextAlign>Center</TextAlign>
+                                  </Style>
+                                </Paragraph>
+                              </Paragraphs>
+                              <rd:DefaultName>bola_26</rd:DefaultName>
+                              <Top>1.96103cm</Top>
+                              <Left>5.79326cm</Left>
+                              <Height>0.3cm</Height>
+                              <Width>1.83587cm</Width>
+                              <ZIndex>14</ZIndex>
+                              <ToolTip>Dezena e sua respectiva frequência</ToolTip>
+                              <Style>
+                                <Border>
+                                  <Style>None</Style>
+                                </Border>
+                                <BackgroundColor>=IIf(Fields!bola_19.Value &gt;= CInt(Mid(Fields!Max_8.Value,1,5)), "SeaGreen",
+IIf(Fields!bola_19.Value &lt;= CInt(Mid(Fields!Min_8.Value,1,5)), "Tomato", "Gold"))</BackgroundColor>
+                              </Style>
+                            </Textbox>
+                            <Textbox Name="bola_118">
+                              <CanGrow>true</CanGrow>
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value>="21 = " &amp; Format(Fields!bola_21.Value,"d2")</Value>
+                                      <Style>
+                                        <Color>White</Color>
+                                      </Style>
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style>
+                                    <TextAlign>Center</TextAlign>
+                                  </Style>
+                                </Paragraph>
+                              </Paragraphs>
+                              <rd:DefaultName>bola_110</rd:DefaultName>
+                              <Top>0.59914cm</Top>
+                              <Left>7.74726cm</Left>
+                              <Height>0.3cm</Height>
+                              <Width>1.83587cm</Width>
+                              <ZIndex>15</ZIndex>
+                              <ToolTip>Dezena e sua respectiva frequência</ToolTip>
+                              <Style>
+                                <Border>
+                                  <Style>None</Style>
+                                </Border>
+                                <BackgroundColor>=IIf(Fields!bola_21.Value &gt;= CInt(Mid(Fields!Max_8.Value,1,5)), "SeaGreen",
+IIf(Fields!bola_21.Value &lt;= CInt(Mid(Fields!Min_8.Value,1,5)), "Tomato", "Gold"))</BackgroundColor>
+                              </Style>
+                            </Textbox>
+                            <Textbox Name="bola_34">
+                              <CanGrow>true</CanGrow>
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value>="22 = " &amp; Format(Fields!bola_22.Value,"d2")</Value>
+                                      <Style>
+                                        <Color>White</Color>
+                                      </Style>
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style>
+                                    <TextAlign>Center</TextAlign>
+                                  </Style>
+                                </Paragraph>
+                              </Paragraphs>
+                              <rd:DefaultName>bola_26</rd:DefaultName>
+                              <Top>1.0531cm</Top>
+                              <Left>7.74726cm</Left>
+                              <Height>0.3cm</Height>
+                              <Width>1.83587cm</Width>
+                              <ZIndex>16</ZIndex>
+                              <ToolTip>Dezena e sua respectiva frequência</ToolTip>
+                              <Style>
+                                <Border>
+                                  <Style>None</Style>
+                                </Border>
+                                <BackgroundColor>=IIf(Fields!bola_22.Value &gt;= CInt(Mid(Fields!Max_8.Value,1,5)), "SeaGreen",
+IIf(Fields!bola_22.Value &lt;= CInt(Mid(Fields!Min_8.Value,1,5)), "Tomato", "Gold"))</BackgroundColor>
+                              </Style>
+                            </Textbox>
+                            <Textbox Name="bola_119">
+                              <CanGrow>true</CanGrow>
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value>="23 = " &amp; Format(Fields!bola_23.Value,"d2")</Value>
+                                      <Style>
+                                        <Color>White</Color>
+                                      </Style>
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style>
+                                    <TextAlign>Center</TextAlign>
+                                  </Style>
+                                </Paragraph>
+                              </Paragraphs>
+                              <rd:DefaultName>bola_110</rd:DefaultName>
+                              <Top>1.49731cm</Top>
+                              <Left>7.74726cm</Left>
+                              <Height>0.3cm</Height>
+                              <Width>1.83587cm</Width>
+                              <ZIndex>17</ZIndex>
+                              <ToolTip>Dezena e sua respectiva frequência</ToolTip>
+                              <Style>
+                                <Border>
+                                  <Style>None</Style>
+                                </Border>
+                                <BackgroundColor>=IIf(Fields!bola_23.Value &gt;= CInt(Mid(Fields!Max_8.Value,1,5)), "SeaGreen",
+IIf(Fields!bola_23.Value &lt;= CInt(Mid(Fields!Min_8.Value,1,5)), "Tomato", "Gold"))</BackgroundColor>
+                              </Style>
+                            </Textbox>
+                            <Textbox Name="bola_35">
+                              <CanGrow>true</CanGrow>
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value>="24 = " &amp; Format(Fields!bola_24.Value,"d2")</Value>
+                                      <Style>
+                                        <Color>White</Color>
+                                      </Style>
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style>
+                                    <TextAlign>Center</TextAlign>
+                                  </Style>
+                                </Paragraph>
+                              </Paragraphs>
+                              <rd:DefaultName>bola_26</rd:DefaultName>
+                              <Top>1.96103cm</Top>
+                              <Left>7.74726cm</Left>
+                              <Height>0.3cm</Height>
+                              <Width>1.83587cm</Width>
+                              <ZIndex>18</ZIndex>
+                              <ToolTip>Dezena e sua respectiva frequência</ToolTip>
+                              <Style>
+                                <Border>
+                                  <Style>None</Style>
+                                </Border>
+                                <BackgroundColor>=IIf(Fields!bola_24.Value &gt;= CInt(Mid(Fields!Max_8.Value,1,5)), "SeaGreen",
+IIf(Fields!bola_24.Value &lt;= CInt(Mid(Fields!Min_8.Value,1,5)), "Tomato", "Gold"))</BackgroundColor>
+                              </Style>
+                            </Textbox>
+                            <Textbox Name="bola_36">
+                              <CanGrow>true</CanGrow>
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value>="05 = " &amp; Format(Fields!bola_5.Value,"d2")</Value>
+                                      <Style>
+                                        <Color>White</Color>
+                                      </Style>
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style>
+                                    <TextAlign>Center</TextAlign>
+                                  </Style>
+                                </Paragraph>
+                              </Paragraphs>
+                              <rd:DefaultName>bola_26</rd:DefaultName>
+                              <Top>2.41499cm</Top>
+                              <Height>0.3cm</Height>
+                              <Width>1.83587cm</Width>
+                              <ZIndex>19</ZIndex>
+                              <ToolTip>Dezena e sua respectiva frequência</ToolTip>
+                              <Style>
+                                <Border>
+                                  <Style>None</Style>
+                                </Border>
+                                <BackgroundColor>=IIf(Fields!bola_5.Value &gt;= CInt(Mid(Fields!Max_8.Value,1,5)), "SeaGreen",
+IIf(Fields!bola_5.Value &lt;= CInt(Mid(Fields!Min_8.Value,1,5)), "Tomato", "Gold"))</BackgroundColor>
+                              </Style>
+                            </Textbox>
+                            <Textbox Name="bola_37">
+                              <CanGrow>true</CanGrow>
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value>="10 = " &amp; Format(Fields!bola_10.Value,"d2")</Value>
+                                      <Style>
+                                        <Color>White</Color>
+                                      </Style>
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style>
+                                    <TextAlign>Center</TextAlign>
+                                  </Style>
+                                </Paragraph>
+                              </Paragraphs>
+                              <rd:DefaultName>bola_26</rd:DefaultName>
+                              <Top>2.41499cm</Top>
+                              <Left>1.896cm</Left>
+                              <Height>0.3cm</Height>
+                              <Width>1.83587cm</Width>
+                              <ZIndex>20</ZIndex>
+                              <ToolTip>Dezena e sua respectiva frequência</ToolTip>
+                              <Style>
+                                <Border>
+                                  <Style>None</Style>
+                                </Border>
+                                <BackgroundColor>=IIf(Fields!bola_10.Value &gt;= CInt(Mid(Fields!Max_8.Value,1,5)), "SeaGreen",
+IIf(Fields!bola_10.Value &lt;= CInt(Mid(Fields!Min_8.Value,1,5)), "Tomato", "Gold"))</BackgroundColor>
+                              </Style>
+                            </Textbox>
+                            <Textbox Name="bola_38">
+                              <CanGrow>true</CanGrow>
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value>="15 = " &amp; Format(Fields!bola_15.Value,"d2")</Value>
+                                      <Style>
+                                        <Color>White</Color>
+                                      </Style>
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style>
+                                    <TextAlign>Center</TextAlign>
+                                  </Style>
+                                </Paragraph>
+                              </Paragraphs>
+                              <rd:DefaultName>bola_26</rd:DefaultName>
+                              <Top>2.41499cm</Top>
+                              <Left>3.81825cm</Left>
+                              <Height>0.3cm</Height>
+                              <Width>1.83587cm</Width>
+                              <ZIndex>21</ZIndex>
+                              <ToolTip>Dezena e sua respectiva frequência</ToolTip>
+                              <Style>
+                                <Border>
+                                  <Style>None</Style>
+                                </Border>
+                                <BackgroundColor>=IIf(Fields!bola_15.Value &gt;= CInt(Mid(Fields!Max_8.Value,1,5)), "SeaGreen",
+IIf(Fields!bola_15.Value &lt;= CInt(Mid(Fields!Min_8.Value,1,5)), "Tomato", "Gold"))</BackgroundColor>
+                              </Style>
+                            </Textbox>
+                            <Textbox Name="bola_39">
+                              <CanGrow>true</CanGrow>
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value>="20 = " &amp; Format(Fields!bola_20.Value,"d2")</Value>
+                                      <Style>
+                                        <Color>White</Color>
+                                      </Style>
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style>
+                                    <TextAlign>Center</TextAlign>
+                                  </Style>
+                                </Paragraph>
+                              </Paragraphs>
+                              <rd:DefaultName>bola_26</rd:DefaultName>
+                              <Top>2.41499cm</Top>
+                              <Left>5.79326cm</Left>
+                              <Height>0.3cm</Height>
+                              <Width>1.83587cm</Width>
+                              <ZIndex>22</ZIndex>
+                              <ToolTip>Dezena e sua respectiva frequência</ToolTip>
+                              <Style>
+                                <Border>
+                                  <Style>None</Style>
+                                </Border>
+                                <BackgroundColor>=IIf(Fields!bola_20.Value &gt;= CInt(Mid(Fields!Max_8.Value,1,5)), "SeaGreen",
+IIf(Fields!bola_20.Value &lt;= CInt(Mid(Fields!Min_8.Value,1,5)), "Tomato", "Gold"))</BackgroundColor>
+                              </Style>
+                            </Textbox>
+                            <Textbox Name="bola_40">
+                              <CanGrow>true</CanGrow>
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value>="25 = " &amp; Format(Fields!bola_25.Value,"d2")</Value>
+                                      <Style>
+                                        <Color>White</Color>
+                                      </Style>
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style>
+                                    <TextAlign>Center</TextAlign>
+                                  </Style>
+                                </Paragraph>
+                              </Paragraphs>
+                              <rd:DefaultName>bola_26</rd:DefaultName>
+                              <Top>2.41499cm</Top>
+                              <Left>7.74726cm</Left>
+                              <Height>0.3cm</Height>
+                              <Width>1.83587cm</Width>
+                              <ZIndex>23</ZIndex>
+                              <ToolTip>Dezena e sua respectiva frequência</ToolTip>
+                              <Style>
+                                <Border>
+                                  <Style>None</Style>
+                                </Border>
+                                <BackgroundColor>=IIf(Fields!bola_25.Value &gt;= CInt(Mid(Fields!Max_8.Value,1,5)), "SeaGreen",
+IIf(Fields!bola_25.Value &lt;= CInt(Mid(Fields!Min_8.Value,1,5)), "Tomato", "Gold"))</BackgroundColor>
+                              </Style>
+                            </Textbox>
+                            <Textbox Name="bola_41">
+                              <CanGrow>true</CanGrow>
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value>="01 = " &amp; Format(Fields!bola_1.Value,"d2")</Value>
+                                      <Style>
+                                        <Color>White</Color>
+                                      </Style>
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style>
+                                    <TextAlign>Center</TextAlign>
+                                  </Style>
+                                </Paragraph>
+                              </Paragraphs>
+                              <rd:DefaultName>bola_26</rd:DefaultName>
+                              <Top>0.58799cm</Top>
+                              <Height>0.3cm</Height>
+                              <Width>1.83587cm</Width>
+                              <ZIndex>24</ZIndex>
+                              <ToolTip>Dezena e sua respectiva frequência</ToolTip>
+                              <Style>
+                                <Border>
+                                  <Style>None</Style>
+                                </Border>
+                                <BackgroundColor>=IIf(Fields!bola_1.Value &gt;= CInt(Mid(Fields!Max_8.Value,1,5)), "SeaGreen",
+IIf(Fields!bola_1.Value &lt;= CInt(Mid(Fields!Min_8.Value,1,5)), "Tomato", "Gold"))</BackgroundColor>
+                              </Style>
+                            </Textbox>
+                            <Textbox Name="Textbox4">
+                              <CanGrow>true</CanGrow>
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value>DEZENAS </Value>
+                                      <Style>
+                                        <FontSize>8pt</FontSize>
+                                        <Color>AntiqueWhite</Color>
+                                      </Style>
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style>
+                                    <TextAlign>Center</TextAlign>
+                                  </Style>
+                                </Paragraph>
+                              </Paragraphs>
+                              <rd:DefaultName>Textbox2</rd:DefaultName>
+                              <Height>0.48216cm</Height>
+                              <Width>9.60014cm</Width>
+                              <ZIndex>25</ZIndex>
+                              <Style>
+                                <Border>
+                                  <Style>None</Style>
+                                </Border>
+                                <BackgroundColor>Gray</BackgroundColor>
+                                <VerticalAlign>Middle</VerticalAlign>
+                              </Style>
+                            </Textbox>
+                            <Textbox Name="Textbox37">
+                              <CanGrow>true</CanGrow>
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value>Frequências:</Value>
+                                      <Style>
+                                        <FontSize>7pt</FontSize>
+                                      </Style>
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style>
+                                    <TextAlign>Left</TextAlign>
+                                  </Style>
+                                </Paragraph>
+                              </Paragraphs>
+                              <rd:DefaultName>Textbox37</rd:DefaultName>
+                              <Top>2.82082cm</Top>
+                              <Left>4.38603cm</Left>
+                              <Height>0.3cm</Height>
+                              <Width>1.62927cm</Width>
+                              <ZIndex>26</ZIndex>
+                              <Style>
+                                <Border>
+                                  <Style>None</Style>
+                                </Border>
+                                <VerticalAlign>Top</VerticalAlign>
+                              </Style>
+                            </Textbox>
+                            <Textbox Name="Textbox38">
+                              <CanGrow>true</CanGrow>
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value />
+                                      <Style>
+                                        <FontSize>6pt</FontSize>
+                                        <Color>White</Color>
+                                      </Style>
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style>
+                                    <TextAlign>Center</TextAlign>
+                                  </Style>
+                                </Paragraph>
+                              </Paragraphs>
+                              <rd:DefaultName>Textbox37</rd:DefaultName>
+                              <Top>2.82082cm</Top>
+                              <Left>6.15641cm</Left>
+                              <Height>0.3cm</Height>
+                              <Width>0.3cm</Width>
+                              <ZIndex>27</ZIndex>
+                              <Style>
+                                <Border>
+                                  <Style>None</Style>
+                                </Border>
+                                <BackgroundColor>Green</BackgroundColor>
+                              </Style>
+                            </Textbox>
+                            <Textbox Name="Textbox41">
+                              <CanGrow>true</CanGrow>
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value>Alta</Value>
+                                      <Style>
+                                        <FontSize>7pt</FontSize>
+                                      </Style>
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style>
+                                    <TextAlign>Left</TextAlign>
+                                  </Style>
+                                </Paragraph>
+                              </Paragraphs>
+                              <rd:DefaultName>Textbox37</rd:DefaultName>
+                              <Top>2.82082cm</Top>
+                              <Left>6.49169cm</Left>
+                              <Height>0.3cm</Height>
+                              <Width>0.62717cm</Width>
+                              <ZIndex>28</ZIndex>
+                              <Style>
+                                <Border>
+                                  <Style>None</Style>
+                                </Border>
+                                <VerticalAlign>Top</VerticalAlign>
+                              </Style>
+                            </Textbox>
+                            <Textbox Name="Textbox42">
+                              <CanGrow>true</CanGrow>
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value>Média</Value>
+                                      <Style>
+                                        <FontSize>7pt</FontSize>
+                                      </Style>
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style>
+                                    <TextAlign>Left</TextAlign>
+                                  </Style>
+                                </Paragraph>
+                              </Paragraphs>
+                              <rd:DefaultName>Textbox37</rd:DefaultName>
+                              <Top>2.82082cm</Top>
+                              <Left>7.63052cm</Left>
+                              <Height>0.3cm</Height>
+                              <Width>0.70858cm</Width>
+                              <ZIndex>29</ZIndex>
+                              <Style>
+                                <Border>
+                                  <Style>None</Style>
+                                </Border>
+                                <VerticalAlign>Top</VerticalAlign>
+                              </Style>
+                            </Textbox>
+                            <Textbox Name="Textbox43">
+                              <CanGrow>true</CanGrow>
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value />
+                                      <Style>
+                                        <FontSize>6pt</FontSize>
+                                        <Color>White</Color>
+                                      </Style>
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style>
+                                    <TextAlign>Center</TextAlign>
+                                  </Style>
+                                </Paragraph>
+                              </Paragraphs>
+                              <rd:DefaultName>Textbox37</rd:DefaultName>
+                              <Top>2.82082cm</Top>
+                              <Left>7.29525cm</Left>
+                              <Height>0.3cm</Height>
+                              <Width>0.3cm</Width>
+                              <ZIndex>30</ZIndex>
+                              <Style>
+                                <Border>
+                                  <Style>None</Style>
+                                </Border>
+                                <BackgroundColor>Gold</BackgroundColor>
+                              </Style>
+                            </Textbox>
+                            <Textbox Name="Textbox44">
+                              <CanGrow>true</CanGrow>
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value />
+                                      <Style>
+                                        <FontSize>6pt</FontSize>
+                                        <Color>White</Color>
+                                      </Style>
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style>
+                                    <TextAlign>Center</TextAlign>
+                                  </Style>
+                                </Paragraph>
+                              </Paragraphs>
+                              <rd:DefaultName>Textbox37</rd:DefaultName>
+                              <Top>2.82082cm</Top>
+                              <Left>8.51549cm</Left>
+                              <Height>0.3cm</Height>
+                              <Width>0.3cm</Width>
+                              <ZIndex>31</ZIndex>
+                              <Style>
+                                <Border>
+                                  <Style>None</Style>
+                                </Border>
+                                <BackgroundColor>Tomato</BackgroundColor>
+                              </Style>
+                            </Textbox>
+                            <Textbox Name="Textbox45">
+                              <CanGrow>true</CanGrow>
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value>Baixa</Value>
+                                      <Style>
+                                        <FontSize>7pt</FontSize>
+                                      </Style>
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style>
+                                    <TextAlign>Left</TextAlign>
+                                  </Style>
+                                </Paragraph>
+                              </Paragraphs>
+                              <rd:DefaultName>Textbox37</rd:DefaultName>
+                              <Top>2.82082cm</Top>
+                              <Left>8.85076cm</Left>
+                              <Height>0.3cm</Height>
+                              <Width>0.70858cm</Width>
+                              <ZIndex>32</ZIndex>
+                              <Style>
+                                <Border>
+                                  <Style>None</Style>
+                                </Border>
+                                <VerticalAlign>Top</VerticalAlign>
+                              </Style>
+                            </Textbox>
+                          </ReportItems>
+                          <KeepTogether>true</KeepTogether>
+                          <Top>0.09204cm</Top>
+                          <Left>0.02286cm</Left>
+                          <Height>3.12082cm</Height>
+                          <Width>9.60014cm</Width>
+                          <ZIndex>1</ZIndex>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                          </Style>
+                        </Rectangle>
+                      </ReportItems>
+                      <KeepTogether>true</KeepTogether>
+                      <Style>
+                        <Border>
+                          <Style>None</Style>
+                        </Border>
+                      </Style>
+                    </Rectangle>
+                  </CellContents>
+                </TablixCell>
+              </TablixCells>
+            </TablixRow>
+          </TablixRows>
+        </TablixBody>
+        <TablixColumnHierarchy>
+          <TablixMembers>
+            <TablixMember />
+          </TablixMembers>
+        </TablixColumnHierarchy>
+        <TablixRowHierarchy>
+          <TablixMembers>
+            <TablixMember>
+              <Group Name="Detalhes" />
+            </TablixMember>
+          </TablixMembers>
+        </TablixRowHierarchy>
+        <DataSetName>Frequencia</DataSetName>
+        <Height>3.21286cm</Height>
+        <Width>14.72861cm</Width>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+        </Style>
+      </Tablix>
+    </ReportItems>
+    <Height>1.26491in</Height>
+    <Style>
+      <Border>
+        <Style>None</Style>
+      </Border>
+    </Style>
+  </Body>
+  <Width>5.79866in</Width>
+  <Page>
+    <PageHeight>4cm</PageHeight>
+    <PageWidth>13.5cm</PageWidth>
+    <InteractiveHeight>4cm</InteractiveHeight>
+    <InteractiveWidth>14.5cm</InteractiveWidth>
+    <LeftMargin>0cm</LeftMargin>
+    <RightMargin>0cm</RightMargin>
+    <TopMargin>0cm</TopMargin>
+    <BottomMargin>0cm</BottomMargin>
+    <ColumnSpacing>0.13cm</ColumnSpacing>
+    <Style>
+      <Border>
+        <Color>Purple</Color>
+        <Style>None</Style>
+      </Border>
+    </Style>
+  </Page>
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="Lotofacil">
+      <ConnectionProperties>
+        <DataProvider>System.Data.DataSet</DataProvider>
+        <ConnectString>/* Local Connection */</ConnectString>
+      </ConnectionProperties>
+      <rd:DataSourceID>71489c35-cd83-4724-9bb6-e692c71764aa</rd:DataSourceID>
+    </DataSource>
+  </DataSources>
+  <DataSets>
+    <DataSet Name="Frequencia">
+      <Query>
+        <DataSourceName>Lotofacil</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="bola_1">
+          <DataField>bola_1</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="bola_10">
+          <DataField>bola_10</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="bola_11">
+          <DataField>bola_11</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="bola_12">
+          <DataField>bola_12</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="bola_13">
+          <DataField>bola_13</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="bola_14">
+          <DataField>bola_14</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="bola_15">
+          <DataField>bola_15</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="bola_16">
+          <DataField>bola_16</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="bola_17">
+          <DataField>bola_17</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="bola_18">
+          <DataField>bola_18</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="bola_19">
+          <DataField>bola_19</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="bola_2">
+          <DataField>bola_2</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="bola_20">
+          <DataField>bola_20</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="bola_21">
+          <DataField>bola_21</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="bola_22">
+          <DataField>bola_22</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="bola_23">
+          <DataField>bola_23</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="bola_24">
+          <DataField>bola_24</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="bola_25">
+          <DataField>bola_25</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="bola_3">
+          <DataField>bola_3</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="bola_4">
+          <DataField>bola_4</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="bola_5">
+          <DataField>bola_5</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="bola_6">
+          <DataField>bola_6</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="bola_7">
+          <DataField>bola_7</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="bola_8">
+          <DataField>bola_8</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="bola_9">
+          <DataField>bola_9</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Max_1">
+          <DataField>Max_1</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Max_2">
+          <DataField>Max_2</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Max_3">
+          <DataField>Max_3</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Max_4">
+          <DataField>Max_4</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Max_5">
+          <DataField>Max_5</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Max_6">
+          <DataField>Max_6</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Max_7">
+          <DataField>Max_7</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Max_8">
+          <DataField>Max_8</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Min_1">
+          <DataField>Min_1</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Min_2">
+          <DataField>Min_2</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Min_3">
+          <DataField>Min_3</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Min_4">
+          <DataField>Min_4</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Min_5">
+          <DataField>Min_5</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Min_6">
+          <DataField>Min_6</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Min_7">
+          <DataField>Min_7</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Min_8">
+          <DataField>Min_8</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>Lotofacil</rd:DataSetName>
+        <rd:TableName>Bolas</rd:TableName>
+        <rd:ObjectDataSourceType>Lotofacil.Bolas, Lotofacil, Version=14.11.11.584, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
+      </rd:DataSetInfo>
+    </DataSet>
+  </DataSets>
+  <rd:ReportUnitType>Cm</rd:ReportUnitType>
+  <rd:ReportID>bc47d778-2033-4cfd-918c-b7f843ec999b</rd:ReportID>
+</Report>
